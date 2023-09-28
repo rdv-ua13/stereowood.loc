@@ -16,15 +16,22 @@
 }
 @media (min-width: 992px) {
 	body {
-		.main {
-			padding-top: 156px;
+		&.index {
+			.main {
+				padding-top: 156px;
+			}
+		}
+		&:not(.index) {
+			.main {
+				padding-top: 168px;
+			}
 		}
 	}
 }
 @media (max-width: 991.98px) {
 	body {
 		.main {
-			padding-top: 16px;
+			padding-top: 12px;
 		}
 	}
 }
@@ -380,12 +387,9 @@
 		display: flex;
 
 		&-view {
-			position: relative;
+			display: flex;
 			min-width: 100%;
 			width: 100%;
-			background-repeat: no-repeat;
-			background-position: center;
-			background-size: cover;
 		}
 		&-caption {
 			position: absolute;
@@ -419,12 +423,6 @@
 				}
 			}
 		}
-		&__certificates {
-			&-view {
-				min-height: calc(1280px * 0.25);
-				height: calc(1280px * 0.25);
-			}
-		}
 	}
 }
 @media (max-width: 991.98px) {
@@ -453,10 +451,6 @@
 @media (max-width: 575.98px) {
 	.production {
 		&__certificates {
-			&-view {
-				min-height: calc((100vw - 32px) * 0.5);
-				height: calc((100vw - 32px) * 0.5);
-			}
 			&-caption {
 				min-width: 200px;
 				width: 200px;
@@ -467,23 +461,9 @@
 @media (min-width: 576px) and (max-width: 991.98px) {
 	.production {
 		&__certificates {
-			&-view {
-				min-height: calc((100vw - 32px) * 0.35);
-				height: calc((100vw - 32px) * 0.35);
-			}
 			&-caption {
 				min-width: 270px;
 				width: 270px;
-			}
-		}
-	}
-}
-@media (min-width: 992px) and (max-width: 1311.98px) {
-	.production {
-		&__certificates {
-			&-view {
-				min-height: calc((100vw - 32px) * 0.25);
-				height: calc((100vw - 32px) * 0.25);
 			}
 		}
 	}

@@ -205,10 +205,14 @@
                                             height="308"
                                             alt="Изображение блока"
                                     >
+                                    <div class="card__sale-label">
+                                        <span class="sale-label sale-label-red">20%</span>
+                                        <span class="sale-label sale-label-green">Новинка</span>
+                                    </div>
                                 </div>
                                 <div class="card__descr">
                                     <div class="card__caption">Детские игровые комплексы</div>
-                                    <div class="card__title">Игровой комплекс ARTWOOD «Корабль Венеция» с горкой и ...</div>
+                                    <div class="card__title">Игровой комплекс ARTWOOD «Корабль Венеция» с горкой и комплекс с горкой</div>
                                     <div class="card__properties">
                                         <div class="card__properties-row">
                                             <span>Производственный артикул:</span>
@@ -251,6 +255,9 @@
                                             height="308"
                                             alt="Изображение блока"
                                     >
+                                    <div class="card__sale-label">
+                                        <span class="sale-label sale-label-green">Новинка</span>
+                                    </div>
                                 </div>
                                 <div class="card__descr">
                                     <div class="card__caption">Теннисные столы</div>
@@ -297,6 +304,9 @@
                                             height="308"
                                             alt="Изображение блока"
                                     >
+                                    <div class="card__sale-label">
+                                        <span class="sale-label sale-label-green">Новинка</span>
+                                    </div>
                                 </div>
                                 <div class="card__descr">
                                     <div class="card__caption">Оборудование для воркаута</div>
@@ -343,6 +353,9 @@
                                             height="308"
                                             alt="Изображение блока"
                                     >
+                                    <div class="card__sale-label">
+                                        <span class="sale-label sale-label-green">Новинка</span>
+                                    </div>
                                 </div>
                                 <div class="card__descr">
                                     <div class="card__caption">Скамейки</div>
@@ -389,6 +402,9 @@
                                             height="308"
                                             alt="Изображение блока"
                                     >
+                                    <div class="card__sale-label">
+                                        <span class="sale-label sale-label-green">Новинка</span>
+                                    </div>
                                 </div>
                                 <div class="card__descr">
                                     <div class="card__caption">Детские игровые комплексы</div>
@@ -457,7 +473,9 @@
                 </div>
             </div>
             <div class="production__certificates">
-                <div class="production__certificates-view" style="background-image: url('img/img-5.jpg')"></div>
+                <div class="production__certificates-view">
+                    <div class="basic-banner" style="background-image: url('img/img-5.jpg')"></div>
+                </div>
                 <div class="production__certificates-caption caption-panel">
                     <div class="caption-panel-descr">Вся продукция сертифицирована в соответствии с ТР ЕАЭС 042/2017 «О безопасности оборудования для детских игровых площадок».</div>
                     <div class="caption-panel-link">

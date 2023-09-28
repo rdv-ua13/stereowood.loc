@@ -85,6 +85,9 @@
             <!--<li class="block-ready">Блок готов</li>-->
             <li><a href="index.php" target="_blank" class="ready">Главная</a></li>
             <br>
+
+            <li><a href="catalog.php" target="_blank" class="ready">Каталог</a></li>
+            <br>
             <br>
 
             <li><a href="ui.php" target="_blank">ui</a></li>
