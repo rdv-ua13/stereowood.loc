@@ -186,260 +186,256 @@
 
 <div class="gap-xl">
     <div class="container">
-        <div class=" basic-slider-out-container">
-            <div class="block block-sm block-top block-border-top">
-                <div class="gap-sm">
-                    <div class="h3">Новинки</div>
-                </div>
+        <div class="block block-sm block-top block-border-top">
+            <div class="gap-sm">
+                <div class="h3">Новинки</div>
+            </div>
 
-                <div class="catalog-extra-slider out-container-x">
-                    <div class="basic-slider-wrap">
-                        <div class="basic-slider basic-slider-desktop swiper product-slider" data-basic-slider>
-                            <div class="swiper-wrapper card-list card-list--mobile">
-                                <div class="swiper-slide">
-                                    <div class="card card-product">
-                                        <div class="card__view">
-                                            <img
-                                                    loading="lazy"
-                                                    src="img/card-img-1.jpg"
-                                                    class="image"
-                                                    width="308"
-                                                    height="308"
-                                                    alt="Изображение блока"
-                                            >
+            <div class="basic-slider-wrap">
+                <div class="basic-slider basic-slider-desktop swiper product-slider" data-basic-slider>
+                    <div class="swiper-wrapper card-list card-list--mobile">
+                        <div class="swiper-slide">
+                            <div class="card card-product">
+                                <div class="card__view">
+                                    <img
+                                            loading="lazy"
+                                            src="img/card-img-1.jpg"
+                                            class="image"
+                                            width="308"
+                                            height="308"
+                                            alt="Изображение блока"
+                                    >
+                                </div>
+                                <div class="card__descr">
+                                    <div class="card__caption">Детские игровые комплексы</div>
+                                    <div class="card__title">Игровой комплекс ARTWOOD «Корабль Венеция» с горкой и ...</div>
+                                    <div class="card__properties">
+                                        <div class="card__properties-row">
+                                            <span>Производственный артикул:</span>
+                                            <span class="value">CWPg169.151</span>
                                         </div>
-                                        <div class="card__descr">
-                                            <div class="card__caption">Детские игровые комплексы</div>
-                                            <div class="card__title">Игровой комплекс ARTWOOD «Корабль Венеция» с горкой и ...</div>
-                                            <div class="card__properties">
-                                                <div class="card__properties-row">
-                                                    <span>Производственный артикул:</span>
-                                                    <span class="value">CWPg169.151</span>
-                                                </div>
-                                                <div class="card__properties-row">
-                                                    <span>Материал:</span>
-                                                    <span class="value">лиственница, нержавейка</span>
-                                                </div>
-                                                <div class="card__properties-row">
-                                                    <span>Размеры:</span>
-                                                    <span class="value">5230х5940х2480 мм</span>
-                                                </div>
-                                                <div class="card__properties-row">
-                                                    <span>Зона безопасности:</span>
-                                                    <span class="value">8,23х9,44 м</span>
-                                                </div>
-                                                <div class="card__properties-row">
-                                                    <span>Возраст:</span>
-                                                    <span class="value">3-12 лет</span>
-                                                </div>
-                                            </div>
-                                            <div class="card__price">3 175 400 ₽</div>
-                                            <div class="card__to-cart">
-                                                <button class="btn-reset btn btn-secondary">
-                                                    <span class="btn__text">Добавить в корзину</span>
-                                                </button>
-                                            </div>
+                                        <div class="card__properties-row">
+                                            <span>Материал:</span>
+                                            <span class="value">лиственница, нержавейка</span>
+                                        </div>
+                                        <div class="card__properties-row">
+                                            <span>Размеры:</span>
+                                            <span class="value">5230х5940х2480 мм</span>
+                                        </div>
+                                        <div class="card__properties-row">
+                                            <span>Зона безопасности:</span>
+                                            <span class="value">8,23х9,44 м</span>
+                                        </div>
+                                        <div class="card__properties-row">
+                                            <span>Возраст:</span>
+                                            <span class="value">3-12 лет</span>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="card card-product">
-                                        <div class="card__view">
-                                            <img
-                                                    loading="lazy"
-                                                    src="img/card-img-2.jpg"
-                                                    class="image"
-                                                    width="308"
-                                                    height="308"
-                                                    alt="Изображение блока"
-                                            >
-                                        </div>
-                                        <div class="card__descr">
-                                            <div class="card__caption">Теннисные столы</div>
-                                            <div class="card__title">Стол теннисный для парка «Паркер»</div>
-                                            <div class="card__properties">
-                                                <div class="card__properties-row">
-                                                    <span>Производственный артикул:</span>
-                                                    <span class="value">CWPg169.151</span>
-                                                </div>
-                                                <div class="card__properties-row">
-                                                    <span>Материал:</span>
-                                                    <span class="value">лиственница, нержавейка</span>
-                                                </div>
-                                                <div class="card__properties-row">
-                                                    <span>Размеры:</span>
-                                                    <span class="value">5230х5940х2480 мм</span>
-                                                </div>
-                                                <div class="card__properties-row">
-                                                    <span>Зона безопасности:</span>
-                                                    <span class="value">8,23х9,44 м</span>
-                                                </div>
-                                                <div class="card__properties-row">
-                                                    <span>Возраст:</span>
-                                                    <span class="value">3-12 лет</span>
-                                                </div>
-                                            </div>
-                                            <div class="card__price">3 175 400 ₽</div>
-                                            <div class="card__to-cart">
-                                                <button class="btn-reset btn btn-secondary">
-                                                    <span class="btn__text">Добавить в корзину</span>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="card card-product">
-                                        <div class="card__view">
-                                            <img
-                                                    loading="lazy"
-                                                    src="img/card-img-3.jpg"
-                                                    class="image"
-                                                    width="308"
-                                                    height="308"
-                                                    alt="Изображение блока"
-                                            >
-                                        </div>
-                                        <div class="card__descr">
-                                            <div class="card__caption">Оборудование для воркаута</div>
-                                            <div class="card__title">Спортивный комплекс для занятий воркаутом «Фристайл-15»</div>
-                                            <div class="card__properties">
-                                                <div class="card__properties-row">
-                                                    <span>Производственный артикул:</span>
-                                                    <span class="value">CWPg169.151</span>
-                                                </div>
-                                                <div class="card__properties-row">
-                                                    <span>Материал:</span>
-                                                    <span class="value">лиственница, нержавейка</span>
-                                                </div>
-                                                <div class="card__properties-row">
-                                                    <span>Размеры:</span>
-                                                    <span class="value">5230х5940х2480 мм</span>
-                                                </div>
-                                                <div class="card__properties-row">
-                                                    <span>Зона безопасности:</span>
-                                                    <span class="value">8,23х9,44 м</span>
-                                                </div>
-                                                <div class="card__properties-row">
-                                                    <span>Возраст:</span>
-                                                    <span class="value">3-12 лет</span>
-                                                </div>
-                                            </div>
-                                            <div class="card__price">3 175 400 ₽</div>
-                                            <div class="card__to-cart">
-                                                <button class="btn-reset btn btn-secondary">
-                                                    <span class="btn__text">Добавить в корзину</span>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="card card-product">
-                                        <div class="card__view">
-                                            <img
-                                                    loading="lazy"
-                                                    src="img/card-img-4.jpg"
-                                                    class="image"
-                                                    width="308"
-                                                    height="308"
-                                                    alt="Изображение блока"
-                                            >
-                                        </div>
-                                        <div class="card__descr">
-                                            <div class="card__caption">Скамейки</div>
-                                            <div class="card__title">Скамейка стальная «Модерн»</div>
-                                            <div class="card__properties">
-                                                <div class="card__properties-row">
-                                                    <span>Производственный артикул:</span>
-                                                    <span class="value">CWPg169.151</span>
-                                                </div>
-                                                <div class="card__properties-row">
-                                                    <span>Материал:</span>
-                                                    <span class="value">лиственница, нержавейка</span>
-                                                </div>
-                                                <div class="card__properties-row">
-                                                    <span>Размеры:</span>
-                                                    <span class="value">5230х5940х2480 мм</span>
-                                                </div>
-                                                <div class="card__properties-row">
-                                                    <span>Зона безопасности:</span>
-                                                    <span class="value">8,23х9,44 м</span>
-                                                </div>
-                                                <div class="card__properties-row">
-                                                    <span>Возраст:</span>
-                                                    <span class="value">3-12 лет</span>
-                                                </div>
-                                            </div>
-                                            <div class="card__price">3 175 400 ₽</div>
-                                            <div class="card__to-cart">
-                                                <button class="btn-reset btn btn-secondary">
-                                                    <span class="btn__text">Добавить в корзину</span>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="card card-product">
-                                        <div class="card__view">
-                                            <img
-                                                    loading="lazy"
-                                                    src="img/card-img-1.jpg"
-                                                    class="image"
-                                                    width="308"
-                                                    height="308"
-                                                    alt="Изображение блока"
-                                            >
-                                        </div>
-                                        <div class="card__descr">
-                                            <div class="card__caption">Детские игровые комплексы</div>
-                                            <div class="card__title">Игровой комплекс ARTWOOD «Корабль Венеция» с горкой и ...</div>
-                                            <div class="card__properties">
-                                                <div class="card__properties-row">
-                                                    <span>Производственный артикул:</span>
-                                                    <span class="value">CWPg169.151</span>
-                                                </div>
-                                                <div class="card__properties-row">
-                                                    <span>Материал:</span>
-                                                    <span class="value">лиственница, нержавейка</span>
-                                                </div>
-                                                <div class="card__properties-row">
-                                                    <span>Размеры:</span>
-                                                    <span class="value">5230х5940х2480 мм</span>
-                                                </div>
-                                                <div class="card__properties-row">
-                                                    <span>Зона безопасности:</span>
-                                                    <span class="value">8,23х9,44 м</span>
-                                                </div>
-                                                <div class="card__properties-row">
-                                                    <span>Возраст:</span>
-                                                    <span class="value">3-12 лет</span>
-                                                </div>
-                                            </div>
-                                            <div class="card__price">3 175 400 ₽</div>
-                                            <div class="card__to-cart">
-                                                <button class="btn-reset btn btn-secondary">
-                                                    <span class="btn__text">Добавить в корзину</span>
-                                                </button>
-                                            </div>
-                                        </div>
+                                    <div class="card__price">3 175 400 ₽</div>
+                                    <div class="card__to-cart">
+                                        <button class="btn-reset btn btn-secondary">
+                                            <span class="btn__text">Добавить в корзину</span>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-navigation">
-                            <div class="swiper-button-next">
-                                <svg class="icon icon-md">
-                                    <use href="img/sprite.svg#chevron-down"></use>
-                                </svg>
-                            </div>
-                            <div class="swiper-button-prev">
-                                <svg class="icon icon-md">
-                                    <use href="img/sprite.svg#chevron-down"></use>
-                                </svg>
+                        <div class="swiper-slide">
+                            <div class="card card-product">
+                                <div class="card__view">
+                                    <img
+                                            loading="lazy"
+                                            src="img/card-img-2.jpg"
+                                            class="image"
+                                            width="308"
+                                            height="308"
+                                            alt="Изображение блока"
+                                    >
+                                </div>
+                                <div class="card__descr">
+                                    <div class="card__caption">Теннисные столы</div>
+                                    <div class="card__title">Стол теннисный для парка «Паркер»</div>
+                                    <div class="card__properties">
+                                        <div class="card__properties-row">
+                                            <span>Производственный артикул:</span>
+                                            <span class="value">CWPg169.151</span>
+                                        </div>
+                                        <div class="card__properties-row">
+                                            <span>Материал:</span>
+                                            <span class="value">лиственница, нержавейка</span>
+                                        </div>
+                                        <div class="card__properties-row">
+                                            <span>Размеры:</span>
+                                            <span class="value">5230х5940х2480 мм</span>
+                                        </div>
+                                        <div class="card__properties-row">
+                                            <span>Зона безопасности:</span>
+                                            <span class="value">8,23х9,44 м</span>
+                                        </div>
+                                        <div class="card__properties-row">
+                                            <span>Возраст:</span>
+                                            <span class="value">3-12 лет</span>
+                                        </div>
+                                    </div>
+                                    <div class="card__price">3 175 400 ₽</div>
+                                    <div class="card__to-cart">
+                                        <button class="btn-reset btn btn-secondary">
+                                            <span class="btn__text">Добавить в корзину</span>
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+                        <div class="swiper-slide">
+                            <div class="card card-product">
+                                <div class="card__view">
+                                    <img
+                                            loading="lazy"
+                                            src="img/card-img-3.jpg"
+                                            class="image"
+                                            width="308"
+                                            height="308"
+                                            alt="Изображение блока"
+                                    >
+                                </div>
+                                <div class="card__descr">
+                                    <div class="card__caption">Оборудование для воркаута</div>
+                                    <div class="card__title">Спортивный комплекс для занятий воркаутом «Фристайл-15»</div>
+                                    <div class="card__properties">
+                                        <div class="card__properties-row">
+                                            <span>Производственный артикул:</span>
+                                            <span class="value">CWPg169.151</span>
+                                        </div>
+                                        <div class="card__properties-row">
+                                            <span>Материал:</span>
+                                            <span class="value">лиственница, нержавейка</span>
+                                        </div>
+                                        <div class="card__properties-row">
+                                            <span>Размеры:</span>
+                                            <span class="value">5230х5940х2480 мм</span>
+                                        </div>
+                                        <div class="card__properties-row">
+                                            <span>Зона безопасности:</span>
+                                            <span class="value">8,23х9,44 м</span>
+                                        </div>
+                                        <div class="card__properties-row">
+                                            <span>Возраст:</span>
+                                            <span class="value">3-12 лет</span>
+                                        </div>
+                                    </div>
+                                    <div class="card__price">3 175 400 ₽</div>
+                                    <div class="card__to-cart">
+                                        <button class="btn-reset btn btn-secondary">
+                                            <span class="btn__text">Добавить в корзину</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card card-product">
+                                <div class="card__view">
+                                    <img
+                                            loading="lazy"
+                                            src="img/card-img-4.jpg"
+                                            class="image"
+                                            width="308"
+                                            height="308"
+                                            alt="Изображение блока"
+                                    >
+                                </div>
+                                <div class="card__descr">
+                                    <div class="card__caption">Скамейки</div>
+                                    <div class="card__title">Скамейка стальная «Модерн»</div>
+                                    <div class="card__properties">
+                                        <div class="card__properties-row">
+                                            <span>Производственный артикул:</span>
+                                            <span class="value">CWPg169.151</span>
+                                        </div>
+                                        <div class="card__properties-row">
+                                            <span>Материал:</span>
+                                            <span class="value">лиственница, нержавейка</span>
+                                        </div>
+                                        <div class="card__properties-row">
+                                            <span>Размеры:</span>
+                                            <span class="value">5230х5940х2480 мм</span>
+                                        </div>
+                                        <div class="card__properties-row">
+                                            <span>Зона безопасности:</span>
+                                            <span class="value">8,23х9,44 м</span>
+                                        </div>
+                                        <div class="card__properties-row">
+                                            <span>Возраст:</span>
+                                            <span class="value">3-12 лет</span>
+                                        </div>
+                                    </div>
+                                    <div class="card__price">3 175 400 ₽</div>
+                                    <div class="card__to-cart">
+                                        <button class="btn-reset btn btn-secondary">
+                                            <span class="btn__text">Добавить в корзину</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card card-product">
+                                <div class="card__view">
+                                    <img
+                                            loading="lazy"
+                                            src="img/card-img-1.jpg"
+                                            class="image"
+                                            width="308"
+                                            height="308"
+                                            alt="Изображение блока"
+                                    >
+                                </div>
+                                <div class="card__descr">
+                                    <div class="card__caption">Детские игровые комплексы</div>
+                                    <div class="card__title">Игровой комплекс ARTWOOD «Корабль Венеция» с горкой и ...</div>
+                                    <div class="card__properties">
+                                        <div class="card__properties-row">
+                                            <span>Производственный артикул:</span>
+                                            <span class="value">CWPg169.151</span>
+                                        </div>
+                                        <div class="card__properties-row">
+                                            <span>Материал:</span>
+                                            <span class="value">лиственница, нержавейка</span>
+                                        </div>
+                                        <div class="card__properties-row">
+                                            <span>Размеры:</span>
+                                            <span class="value">5230х5940х2480 мм</span>
+                                        </div>
+                                        <div class="card__properties-row">
+                                            <span>Зона безопасности:</span>
+                                            <span class="value">8,23х9,44 м</span>
+                                        </div>
+                                        <div class="card__properties-row">
+                                            <span>Возраст:</span>
+                                            <span class="value">3-12 лет</span>
+                                        </div>
+                                    </div>
+                                    <div class="card__price">3 175 400 ₽</div>
+                                    <div class="card__to-cart">
+                                        <button class="btn-reset btn btn-secondary">
+                                            <span class="btn__text">Добавить в корзину</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-navigation">
+                    <div class="swiper-button-next">
+                        <svg class="icon icon-md">
+                            <use href="img/sprite.svg#chevron-down"></use>
+                        </svg>
+                    </div>
+                    <div class="swiper-button-prev">
+                        <svg class="icon icon-md">
+                            <use href="img/sprite.svg#chevron-down"></use>
+                        </svg>
                     </div>
                 </div>
             </div>

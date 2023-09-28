@@ -1307,8 +1307,8 @@ input.disabled {
 	}
 
 	.card-list {
-		&.card-list--desktop,
-		&.card-list--mobile {
+		&--desktop,
+		&--mobile {
 			.swiper-slide {
 				display: flex;
 				height: auto;
@@ -1327,8 +1327,8 @@ input.disabled {
 		}
 		&-desktop {
 			& ~ .swiper-navigation {
-				right: -20px;
-				left: -20px;
+				right: -16px;
+				left: -16px;
 			}
 		}
 		&-mobile {
@@ -1338,7 +1338,7 @@ input.disabled {
 		}
 
 		.card-list {
-			&.card-list--desktop {
+			&--desktop {
 				&.swiper-wrapper {
 					height: auto!important;
 					width: 100%;
@@ -1382,7 +1382,7 @@ input.disabled {
 		}
 
 		.card-list {
-			&.card-list--mobile {
+			&--mobile {
 				&.swiper-wrapper {
 					height: auto!important;
 					width: 100%;
@@ -1404,6 +1404,40 @@ input.disabled {
 					}
 					&:last-child {
 						margin-right: 16px!important;
+					}
+				}
+			}
+		}
+	}
+}
+@media (max-width: 374.98px) {
+	.basic-slider {
+		&-desktop {
+			.card-product {
+				min-width: calc(100vw - 32px);
+				width: calc(100vw - 32px);
+
+				.card__view {
+					.image {
+						min-height: calc(100vw - 32px);
+						height: calc(100vw - 32px);
+					}
+				}
+			}
+		}
+	}
+}
+@media (min-width: 375px) and (max-width: 991.98px) {
+	.basic-slider {
+		&-desktop {
+			.card-product {
+				min-width: calc((100vw - 44px) / 2);
+				width: calc((100vw - 44px) / 2);
+
+				.card__view {
+					.image {
+						min-height: calc((100vw - 44px) / 2);
+						height: calc((100vw - 44px) / 2);
 					}
 				}
 			}
@@ -1489,7 +1523,6 @@ input.disabled {
 			}
 		}
 		.card__descr {
-			padding: 8px 16px 16px;
 			border-top: 1px solid var(--text-secondary-color);
 			background-color: var(--white-color);
 		}
@@ -1584,6 +1617,7 @@ input.disabled {
 				position: absolute;
 				right: 0;
 				left: 0;
+				padding: 8px 16px 16px;
 				border-radius: 0 0 16px 16px;
 			}
 			.card__title {
@@ -1616,7 +1650,7 @@ input.disabled {
 	.card-list {
 		gap: 16px;
 
-		&.card-list--mobile {
+		&--mobile {
 			flex-wrap: unset;
 			gap: unset;
 		}
@@ -1657,6 +1691,9 @@ input.disabled {
 @media (max-width: 991.98px) {
 	.card {
 		&-product {
+			.card__descr {
+				padding-top: 8px;
+			}
 			.card__title {
 				font-size: 14px;
 			}
@@ -1692,7 +1729,7 @@ input.disabled {
 	.card-list {
 		gap: 12px;
 
-		&.card-list--desktop {
+		&--desktop {
 			flex-wrap: unset;
 			gap: unset;
 		}
