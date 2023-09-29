@@ -212,7 +212,7 @@
                                 </div>
                                 <div class="card__descr">
                                     <div class="card__caption">Детские игровые комплексы</div>
-                                    <div class="card__title">Игровой комплекс ARTWOOD «Корабль Венеция» с горкой и комплекс с горкой</div>
+                                    <a href="javascript:;" class="card__title">Игровой комплекс ARTWOOD «Корабль Венеция» с горкой и комплекс с горкой</a>
                                     <div class="card__properties">
                                         <div class="card__properties-row">
                                             <span>Производственный артикул:</span>
@@ -261,7 +261,7 @@
                                 </div>
                                 <div class="card__descr">
                                     <div class="card__caption">Теннисные столы</div>
-                                    <div class="card__title">Стол теннисный для парка «Паркер»</div>
+                                    <a href="javascript:;" class="card__title">Стол теннисный для парка «Паркер»</a>
                                     <div class="card__properties">
                                         <div class="card__properties-row">
                                             <span>Производственный артикул:</span>
@@ -310,7 +310,7 @@
                                 </div>
                                 <div class="card__descr">
                                     <div class="card__caption">Оборудование для воркаута</div>
-                                    <div class="card__title">Спортивный комплекс для занятий воркаутом «Фристайл-15»</div>
+                                    <a href="javascript:;" class="card__title">Спортивный комплекс для занятий воркаутом «Фристайл-15»</a>
                                     <div class="card__properties">
                                         <div class="card__properties-row">
                                             <span>Производственный артикул:</span>
@@ -359,7 +359,7 @@
                                 </div>
                                 <div class="card__descr">
                                     <div class="card__caption">Скамейки</div>
-                                    <div class="card__title">Скамейка стальная «Модерн»</div>
+                                    <a href="javascript:;" class="card__title">Скамейка стальная «Модерн»</a>
                                     <div class="card__properties">
                                         <div class="card__properties-row">
                                             <span>Производственный артикул:</span>
@@ -408,7 +408,7 @@
                                 </div>
                                 <div class="card__descr">
                                     <div class="card__caption">Детские игровые комплексы</div>
-                                    <div class="card__title">Игровой комплекс ARTWOOD «Корабль Венеция» с горкой и ...</div>
+                                    <a href="javascript:;" class="card__title">Игровой комплекс ARTWOOD «Корабль Венеция» с горкой и ...</a>
                                     <div class="card__properties">
                                         <div class="card__properties-row">
                                             <span>Производственный артикул:</span>

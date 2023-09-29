@@ -18,7 +18,7 @@ application.prototype.init = function () {
     /*this.initMaskedInput(); not works*/
     this.initBasicSlider();
     this.initSliders();
-    /*this.initCardProductHover();*/
+    this.initSwitchContent();
 
 
     this.initVideoPlayer();
@@ -322,36 +322,17 @@ application.prototype.initSliders = function () {
     }
 };
 
-// Initialize card-product hover
-application.prototype.initCardProductHover = function () {
-    if ($('.card-product').length) {
-        initDesktopHover();
-        $(window).on("resize", initDesktopHover);
+// Initialize switch content
+application.prototype.initSwitchContent = function () {
+    const switchContent = $('.switch-content');
 
-        function initDesktopHover() {
-            let card = $('.card-product');
-            let cardBasicPB = 129;
-
-            if (window.matchMedia("(min-width: 992px)").matches) {
-                card.each(function (i) {
-                    let descr = $(this).find('.card__descr');
-
-                    $(this).on('mouseover', function () {
-                        let descrH = descr.outerHeight();
-
-                        $(this).css({
-                            'padding-bottom': descrH
-                        });
-                    });
-                    $(this).on('mouseout', function () {
-                        $(this).css({
-                            'padding-bottom': cardBasicPB
-                        });
-                    });
-                });
-            }
+    switchContent.on('click', function () {
+        if($(this).hasClass('selected')) {
+            $(this).removeClass('selected');
+        } else {
+            $(this).addClass('selected');
         }
-    }
+    });
 };
 
 
