@@ -19,22 +19,17 @@ application.prototype.init = function () {
     this.initBasicSlider();
     this.initSliders();
     this.initSwitchContent();
-
-
-    this.initVideoPlayer();
-    this.initTooltips();
+    this.initReadmore();
     this.initInputSearchBehavior();
-    this.initCheckall();
-    this.initAnimatedCounter();
-    this.initDeleteTrigger();
-    this.initContactsMap();
-    this.initCatalogContentSort();
-    this.initCatalogSidebarFilterViewSwitcher();
-    this.initCheckedRadioInsurances();
-    this.initCatalogSidebarFilterCheckedTags();
     this.initCatalogSidebarFilter();
+    this.initCatalogSidebarFilterViewSwitcher();
     this.initCatalogSidebarSortOptionsContent();
-    /*this.initDropfiles();*/
+    this.initCatalogSidebarCurrencySymbol();
+    this.initCatalogContentSort();
+    this.initCatalogContentViewSwitcher();
+    this.initTooltips();
+    this.initDeleteTrigger();
+    this.initCheckedRadioInsurances();
 };
 
 // Initialize device check
@@ -275,6 +270,10 @@ application.prototype.initBasicSlider = function () {
                     nextEl: '.basic-slider-wrap-' + i + ' .swiper-button-next',
                     prevEl: '.basic-slider-wrap-' + i + ' .swiper-button-prev',
                 },
+                pagination: {
+                    el: '.basic-slider-wrap-' + i + ' .swiper-pagination',
+                    type: 'bullets',
+                },
                 breakpoints: {
                     992: {
                         spaceBetween: 16
@@ -335,36 +334,48 @@ application.prototype.initSwitchContent = function () {
     });
 };
 
+// Initialize readmore plugin
+application.prototype.initReadmore = function () {
+    if ($('[data-spoiler]').length) {
+        const spoiler = $('[data-spoiler]');
 
+        spoiler.each(function (i) {
+            let currentMoreText = spoiler.eq(i).data('spoiler-more');
+            let currentLessText = spoiler.eq(i).data('spoiler-less');
+            let defaultHeight = 340;
+            let defaultMoreText = 'Показать все';
+            let defaultLessText = 'Свернуть';
+            let currentElemHeight = spoiler.eq(i).data("collapsed-height");
 
-// Initialize video block with custom controls
-application.prototype.initVideoPlayer = function () {
-    if ($('[data-video-player]').length) {
-        let videoPlayer = $('[data-video-player]');
-
-        videoPlayer.on('click', function (i) {
-            let $this = this;
-            let videoCover = $(this).siblings('[data-video-cover]');
-            let isPlaying = $this.currentTime > 0 && !$this.paused && !$this.ended
-                && $this.readyState > $this.HAVE_CURRENT_DATA;
-
-            $this.controls = true;
-
-            if (!isPlaying) {
-                videoCover.addClass('visually-hidden');
-            } else {
-                videoCover.removeClass('visually-hidden');
+            if (currentMoreText === '' || currentMoreText === null || currentMoreText === undefined &&
+                currentLessText === '' || currentLessText === null || currentLessText === undefined)
+            {
+                currentMoreText = defaultMoreText;
+                currentLessText = defaultLessText;
+            } else if (currentMoreText === '' || currentMoreText === null || currentMoreText === undefined) {
+                currentMoreText = defaultMoreText;
+            } else if (currentLessText === '' || currentLessText === null || currentLessText === undefined) {
+                currentLessText = defaultLessText;
             }
-        });
-    }
-};
 
-// Initialize tooltips
-application.prototype.initTooltips = function () {
-    if ($(".tooltip").length) {
-        tippy(".tooltip", {
-            allowHTML: true,
-            trigger: "mouseenter click",
+            if (currentElemHeight === '' || currentElemHeight === null || currentElemHeight === undefined) {
+                currentElemHeight = defaultHeight;
+            }
+
+            if ($(this).find('.spoiler-content').height() > defaultHeight) {
+                $(this).addClass('spoiler-scrolled');
+            }
+
+            spoiler.eq(i).addClass("spoiler-" + i);
+            $(".spoiler-" + i).readmore({
+                collapsedHeight: currentElemHeight,
+                moreLink: '<a href="javascript:;" class="link-dashed link-red spoiler-trigger">\n' +
+                    '                                        <span class="btn__text">' + currentMoreText + '</span>\n' +
+                    '                                    </a>',
+                lessLink: '<a href="javascript:;" class="link-dashed link-red spoiler-trigger">\n' +
+                    '                                        <span class="btn__text">' + currentLessText + '</span>\n' +
+                    '                                    </a>'
+            });
         });
     }
 };
@@ -385,368 +396,6 @@ application.prototype.initInputSearchBehavior = function () {
         $('.input-delete-btn').on('click', function () {
             $(this).closest('.input-search-wrapper').removeClass('has-data');
             $(this).closest('.input-search-wrapper').find('.input-search').val('').removeClass('has-data');
-        });
-    }
-};
-
-// Initialize check all group
-application.prototype.initCheckall = function () {
-    if ($('.checkall-for').length) {
-        initOnloadCheckall();
-        initOnclickCheckallFor();
-        initOnclickCheckallGroup();
-
-        function initOnloadCheckall() {
-            $('.checkall-for').each(function () {
-                const checkallFor = $(this);
-                const checkallForData = checkallFor.data('checkall-for');
-                let checkallForState = false;
-                let checkallGroupState = [];
-                let checkallGroupCheckedState = [];
-
-                checkallForHandling();
-                compareGroupState(checkallGroupState);
-
-                function checkallForHandling() {
-                    $(".checkall-group[data-checkall-group='" + checkallForData + "']").each(function (e) {
-                        let checkallGroupElem = $(this);
-
-                        if(checkallGroupElem.is(':checked')) {
-                            checkallForState = true;
-                            checkallGroupState.push(true);
-                        } else if(!checkallGroupElem.is(':checked')) {
-                            checkallGroupState.push(false);
-                        }
-                    });
-
-                    if(checkallForState === false) {
-                        checkallFor.prop('checked', false);
-                    } else if(checkallForState === true) {
-                        checkallFor.prop('checked', true);
-                    }
-                }
-
-                function compareGroupState(arr) {
-                    $.each(arr, function(i) {
-                        if(arr[i] === true) {
-                            checkallGroupCheckedState.push('checked');
-                        } else if(arr[i] === false) {
-                            checkallGroupCheckedState.push('notChecked');
-                        }
-                    });
-
-                    const allChecked = checkallGroupCheckedState.every(elem => elem === 'checked');
-
-                    if(allChecked) checkallFor.removeClass('custom-checkbox__input--checkline');
-                }
-            });
-        }
-
-        function initOnclickCheckallFor() {
-            $('.checkall-for').on('click', function (e) {
-                const checkallFor = $(this);
-                const checkallForData = checkallFor.data('checkall-for');
-
-                if(checkallFor.is(':checked')) {
-                    checkallFor.prop('checked', true);
-                    checkallFor.removeClass('custom-checkbox__input--checkline');
-                    $(".checkall-group[data-checkall-group='" + checkallForData + "']").prop("checked", true);
-                } else if(!checkallFor.is(':checked')) {
-                    checkallFor.prop('checked', false);
-                    $(".checkall-group[data-checkall-group='" + checkallForData + "']").prop("checked", false);
-                }
-            });
-        }
-
-        function initOnclickCheckallGroup() {
-            $('.checkall-group').on('click', function (e) {
-                const checkallGroup = $(this);
-                const checkallGroupData = checkallGroup.data('checkall-group');
-
-                let checkallGroupState = [];
-                let checkallGroupCheckedState = [];
-
-                checkallGroupHandling();
-                compareGroupState(checkallGroupState);
-
-                function checkallGroupHandling() {
-                    $(".checkall-group[data-checkall-group='" + checkallGroupData + "']").each(function (e) {
-                        let checkallGroupElem = $(this);
-
-                        if(checkallGroupElem.is(':checked')) {
-                            checkallGroupState.push(true);
-                        } else if(!checkallGroupElem.is(':checked')) {
-                            checkallGroupState.push(false);
-                        }
-                    });
-                }
-
-                function compareGroupState(arr) {
-                    $.each(arr, function(i) {
-                        if(arr[i] === true) {
-                            checkallGroupCheckedState.push('checked');
-                        } else if(arr[i] === false) {
-                            checkallGroupCheckedState.push('notChecked');
-                        }
-                    });
-
-                    const allChecked = checkallGroupCheckedState.every(elem => elem === 'checked');
-                    const allNotChecked = checkallGroupCheckedState.every(elem => elem === 'notChecked');
-
-                    if(allChecked) {
-                        $(".checkall-for[data-checkall-for='" + checkallGroupData + "']").prop('checked', true);
-                        $(".checkall-for[data-checkall-for='" + checkallGroupData + "']").removeClass('custom-checkbox__input--checkline');
-                    } else if(allNotChecked) {
-                        $(".checkall-for[data-checkall-for='" + checkallGroupData + "']").prop('checked', false);
-                    } else if(!allChecked && !allNotChecked) {
-                        $(".checkall-for[data-checkall-for='" + checkallGroupData + "']").prop('checked', true);
-
-                        if(!$(".checkall-for[data-checkall-for='" + checkallGroupData + "']").hasClass('custom-checkbox__input--checkline')) {
-                            $(".checkall-for[data-checkall-for='" + checkallGroupData + "']").addClass('custom-checkbox__input--checkline');
-                        }
-                    }
-                }
-            });
-        }
-    }
-};
-
-// Initialize animated counter
-application.prototype.initAnimatedCounter = function () {
-    if ($('.animated-counter').length) {
-        $('.animated-counter').each(function (i) {
-            let
-                counter = document.querySelectorAll('.animated-counter'),
-                startValue = parseInt(counter[i].dataset.startValue),
-                value = parseInt(counter[i].dataset.value),
-                valueVal = {
-                    val: value
-                },
-                k = (value * 0.01),
-                duration = null;
-
-            if (k > 100) {
-                duration = 2;
-            } else if (k > 10 && k < 100) {
-                duration = 1.5;
-            } else if (k < 10) {
-                duration = 1;
-            }
-
-            gsap.from(valueVal, {
-                duration: duration,
-                ease: 'expo.inOut',
-                val: startValue,
-                roundProps: 'val',
-                onUpdate: function() {
-                    counter[i].innerText = format_number(valueVal.val);
-                }
-            });
-        });
-
-        function format_number(x) {
-            return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-        };
-    }
-};
-
-// Initialize delete trigger
-application.prototype.initDeleteTrigger = function () {
-    $('[data-delete-trigger]').on("click", function () {
-        $(this).closest('[data-removable]').remove();
-    });
-};
-
-// Initialize contacts map
-application.prototype.initContactsMap = function () {
-    if ($('.contacts__map').length) {
-        ymaps.ready(init);
-
-        let map,
-            placemark,
-            iconContentLayout,
-            mapItem = $('.contacts__map-content');
-
-        function init () {
-            mapItem.each(function (i) {
-                mapItem.eq(i).attr('id', 'contactsMap' + i);
-
-                let coordX = $(this).data('x'),
-                    coordY = $(this).data('y'),
-                    hint = $(this).data('hint'),
-                    zoomControl = new ymaps.control.ZoomControl({
-                        options: {
-                            size: 'large',
-                            float: 'none',
-                            position: {
-                                top: 50,
-                                right: 10,
-                                left: 'auto',
-                            },
-                        }
-                    });
-
-                // Параметры карты можно задать в конструкторе.
-                map = new ymaps.Map(
-                    // ID DOM-элемента, в который будет добавлена карта.
-                    'contactsMap' + i,
-                    // Параметры карты.
-                    {
-                        // Географические координаты центра отображаемой карты.
-                        center: [
-                            coordX,
-                            coordY
-                        ],
-                        // Масштаб.
-                        zoom: 15,
-                        controls: ['fullscreenControl'],
-                    }, {
-                        // Поиск по организациям.
-                        searchControlProvider: 'yandex#search'
-                    }
-                );
-
-                // Создаём макет содержимого.
-                iconContentLayout = ymaps.templateLayoutFactory.createClass(
-                    '<div class="placemark">' +
-                    '                <div class="placemark-icon">' +
-                    '                    <svg class="icon">' +
-                    '                        <use href="img/sprite.svg#advantage-buildings-white"></use>' +
-                    '                    </svg>' +
-                    '                    <div class="placemark-icon-arrow"></div>' +
-                    '                </div>' +
-                    '                <div class="placemark-point"></div>' +
-                    '            </div>'
-                );
-
-                placemark = new ymaps.Placemark([coordX, coordY], {
-                    hintContent: hint
-                }, {
-                    // Опции.
-                    // Необходимо указать данный тип макета.
-                    iconLayout: 'default#imageWithContent',
-                    // Своё изображение иконки метки.
-                    iconImageHref: '',
-                    // Размеры метки.
-                    iconImageSize: [48, 48],
-                    // Смещение левого верхнего угла иконки относительно
-                    // её "ножки" (точки привязки).
-                    iconImageOffset: [-24, -24],
-                    // Смещение слоя с содержимым относительно слоя с картинкой.
-                    iconContentOffset: [15, 15],
-                    // Макет содержимого.
-                    iconContentLayout: iconContentLayout
-                });
-
-                map.geoObjects.add(placemark);
-                map.controls.add(zoomControl);
-            });
-        }
-    }
-};
-
-// Initialize catalog content sort
-application.prototype.initCatalogContentSort = function () {
-    if ($('.catalog-sidebar-filter-sort__options').length) {
-        initCatalogContentSortSwitch();
-
-        catalogSettingsSortSelect();
-        $(window).on('resize', catalogSettingsSortSelect);
-
-        $(document).on('click', function (e) {
-            if (!$('.catalog-sidebar-filter-sort__select').is(e.target) &&
-                !$('.catalog-sidebar-filter-sort__options').is(e.target) &&
-                $('.catalog-sidebar-filter-sort__options').has(e.target).length === 0)
-            {
-                closeCatalogContentSettingsSort();
-            }
-        });
-
-        $(document).on('keyup', function (e) {
-            if (e.key == 'Escape') {
-                closeCatalogContentSettingsSort();
-            }
-        });
-
-        function initCatalogContentSortSwitch() {
-            $('.catalog-sidebar-filter-sort__options input[type="radio"]').on('click', function () {
-                if($(this).prop('checked')) {
-                    $(this).closest('.catalog-sidebar-filter-sort__options').find('.catalog-sidebar-filter-sort__options-label').removeClass('active');
-                    $(this).siblings('.catalog-sidebar-filter-sort__options-label').addClass('active');
-                } else {
-                    $(this).siblings('.catalog-sidebar-filter-sort__options-label').removeClass('active');
-                }
-
-                if (window.matchMedia('(max-width: 1199.98px)').matches) {
-                    let selectPlaceholder = $('.catalog-sidebar-filter-sort__options-label.active').text();
-
-                    $('.catalog-sidebar-filter-sort').find('.catalog-sidebar-filter-sort__select-text').text(selectPlaceholder);
-                    $('.catalog-sidebar-filter-sort').find('.catalog-sidebar-filter-sort__select input').val(selectPlaceholder);
-                    closeCatalogContentSettingsSort();
-                }
-            });
-        }
-
-        function catalogSettingsSortSelect() {
-            if (window.matchMedia('(min-width: 1200px)').matches) {
-                closeCatalogContentSettingsSort();
-            } else if (window.matchMedia('(max-width: 1199.98px)').matches) {
-                $('.catalog-sidebar-filter-sort__select').on('click', function () {
-                    if (!$(this).hasClass('active')) {
-                        $(this).addClass('active');
-                        $(this).siblings('.catalog-sidebar-filter-sort__options').addClass('active');
-                    } else if ($(this).hasClass('active')) {
-                        $(this).removeClass('active');
-                        $(this).siblings('.catalog-sidebar-filter-sort__options').removeClass('active');
-                    }
-                });
-            }
-        }
-
-        function closeCatalogContentSettingsSort () {
-            $('.catalog-sidebar-filter-sort__select').removeClass('active');
-            $('.catalog-sidebar-filter-sort__options').removeClass('active');
-        }
-    }
-};
-
-// Initialize catalog sidebar filter view switcher
-application.prototype.initCatalogSidebarFilterViewSwitcher = function () {
-    if ($('[data-filter-option-view]').length && $('[data-filter-option-content]').length) {
-        const viewSwitcherContainer = $('[data-filter-option]');
-        const viewSwitcher = $('[data-filter-option-view]');
-        const viewSwitcherContent = $('[data-filter-option-content]');
-
-        viewSwitcher.on('click', function () {
-            if (!$(this).hasClass('collapse-view-in')) {
-                $(this).addClass('collapse-view-in');
-                $(this).closest(viewSwitcherContainer).find(viewSwitcherContent).addClass('collapse-content-in');
-            } else if ($(this).hasClass('collapse-view-in')) {
-                $(this).removeClass('collapse-view-in');
-                $(this).closest(viewSwitcherContainer).find(viewSwitcherContent).removeClass('collapse-content-in');
-            }
-        });
-    }
-};
-
-// Initialize checked radio insurances
-application.prototype.initCheckedRadioInsurances = function () {
-    if ($('.custom-radio').length) {
-        $('.custom-radio__input').on('click',function () {
-            let name = $(this).attr('name');
-
-            $('.custom-radio__input[name="' + name + '"]').removeClass('checked');
-            $('.custom-radio__input[name="' + name + '"]').not(this).prop('checked', false);
-            $(this).addClass('checked');
-        });
-    }
-};
-
-// Initialize catalog sidebar filter checked tags
-application.prototype.initCatalogSidebarFilterCheckedTags = function () {
-    if ($('.catalog-sidebar-filter__tag').length) {
-        $('.catalog-sidebar-filter__tag input[type="checkbox"]').on('click',function () {
-            $(this).closest('.catalog-sidebar-filter__tag').toggleClass('checked');
         });
     }
 };
@@ -779,6 +428,7 @@ application.prototype.initCatalogSidebarFilter = function () {
                 filterSpoiler.on('click', function () {
                     $(this).addClass('active');
                     filter.addClass('active');
+                    $('body').addClass('overflow-hidden');
                 });
             }
         }
@@ -786,6 +436,7 @@ application.prototype.initCatalogSidebarFilter = function () {
         function setCloseFilter() {
             filter.removeClass('active');
             filterSpoiler.removeClass('active');
+            $('body').removeClass('overflow-hidden');
         }
 
         function setCheckChangeFilter() {
@@ -798,6 +449,25 @@ application.prototype.initCatalogSidebarFilter = function () {
                 });
             }
         }
+    }
+};
+
+// Initialize catalog sidebar filter view switcher
+application.prototype.initCatalogSidebarFilterViewSwitcher = function () {
+    if ($('[data-filter-option-view]').length && $('[data-filter-option-content]').length) {
+        const viewSwitcherContainer = $('[data-filter-option]');
+        const viewSwitcher = $('[data-filter-option-view]');
+        const viewSwitcherContent = $('[data-filter-option-content]');
+
+        viewSwitcher.on('click', function () {
+            if (!$(this).hasClass('collapse-view-in')) {
+                $(this).addClass('collapse-view-in');
+                $(this).closest(viewSwitcherContainer).find(viewSwitcherContent).addClass('collapse-content-in');
+            } else if ($(this).hasClass('collapse-view-in')) {
+                $(this).removeClass('collapse-view-in');
+                $(this).closest(viewSwitcherContainer).find(viewSwitcherContent).removeClass('collapse-content-in');
+            }
+        });
     }
 };
 
@@ -827,291 +497,156 @@ application.prototype.initCatalogSidebarSortOptionsContent = function () {
             $(this).closest('.catalog-sidebar-filter__options-content').find('.spoiler-trigger').removeClass('visually-hidden');
         });
     });
+};
 
+// Initialize catalog sidebar prices adding currency symbol
+application.prototype.initCatalogSidebarCurrencySymbol = function () {
+    $('.catalog-sidebar-prices__input').on('change keyup', function() {
+        $(this).val($(this).val().replace(/[^0-9]/gi, '') + ' ₽');
+    });
+
+    $('.catalog-sidebar-prices__input').on('click keyup', function(e) {
+        let input = this;
+        let end = input.value.length - 2;
+
+        input.setSelectionRange(end, end);
+        input.focus();
+    });
+};
+
+// Initialize catalog content sort
+application.prototype.initCatalogContentSort = function () {
+    if ($('.catalog-content-settings__sort-options').length) {
+        initCatalogContentSortSwitch();
+
+        catalogSettingsSortSelect();
+        $(window).on('resize', catalogSettingsSortSelect);
+
+        $(document).on('click', function (e) {
+            if (!$('.catalog-content-settings__sort-select').is(e.target) &&
+                !$('.catalog-content-settings__sort-options').is(e.target) &&
+                $('.catalog-content-settings__sort-options').has(e.target).length === 0)
+            {
+                closeCatalogContentSettingsSort();
+            }
+        });
+
+        $(document).on('keyup', function (e) {
+            if (e.key == 'Escape') {
+                closeCatalogContentSettingsSort();
+            }
+        });
+
+        function initCatalogContentSortSwitch() {
+            $('.catalog-content-settings__sort-options input[type="radio"]').on('click', function () {
+                if($(this).prop('checked')) {
+                    $(this).closest('.catalog-content-settings__sort-options').find('.catalog-content-settings__sort-label').removeClass('active');
+                    $(this).siblings('.catalog-content-settings__sort-label').addClass('active');
+                } else {
+                    $(this).siblings('.catalog-content-settings__sort-label').removeClass('active');
+                }
+
+                let selectPlaceholder = $('.catalog-content-settings__sort-label.active').text();
+
+                $('.catalog-content-settings__sort').find('.catalog-content-settings__sort-select-text').text(selectPlaceholder);
+                closeCatalogContentSettingsSort();
+            });
+        }
+
+        function catalogSettingsSortSelect() {
+            $('.catalog-content-settings__sort-select').on('click', function () {
+                if (!$(this).hasClass('active')) {
+                    $(this).addClass('active');
+                    $(this).siblings('.catalog-content-settings__sort-options').addClass('active');
+                } else if ($(this).hasClass('active')) {
+                    $(this).removeClass('active');
+                    $(this).siblings('.catalog-content-settings__sort-options').removeClass('active');
+                }
+            });
+        }
+
+        function closeCatalogContentSettingsSort () {
+            $('.catalog-content-settings__sort-select').removeClass('active');
+            $('.catalog-content-settings__sort-options').removeClass('active');
+        }
+    }
+};
+
+// Initialize catalog content view switcher
+application.prototype.initCatalogContentViewSwitcher = function () {
+    if ($('[data-catalog-content-grid]').length) {
+        const viewSwitcherContainer = $('[data-catalog-content-view]');
+        const viewSwitcher = $('[data-catalog-content-grid]');
+
+        $(window).on('resize', responsiveDefaultGrid);
+
+        viewSwitcher.on('click', function () {
+            let defaultValue = $('[data-catalog-content-grid="sm"]');
+            let currentValue = $(this).data('catalog-content-grid');
+
+            switch (currentValue) {
+                case 'sm':
+                    viewSwitcherContainer.removeClass('catalog-content__grid--md catalog-content__grid--lg');
+                    viewSwitcherContainer.addClass('catalog-content__grid--sm');
+                    viewSwitcher.removeClass('active');
+                    $(this).addClass('active');
+                    break;
+                case 'md':
+                    viewSwitcherContainer.removeClass('catalog-content__grid--sm catalog-content__grid--lg');
+                    viewSwitcherContainer.addClass('catalog-content__grid--md');
+                    viewSwitcher.removeClass('active');
+                    $(this).addClass('active');
+                    break;
+                case 'lg':
+                    viewSwitcherContainer.removeClass('catalog-content__grid--sm catalog-content__grid--md');
+                    viewSwitcherContainer.addClass('catalog-content__grid--lg');
+                    viewSwitcher.removeClass('active');
+                    $(this).addClass('active');
+                    break;
+                default:
+                    viewSwitcherContainer.addClass('catalog-content__grid--sm');
+                    viewSwitcher.removeClass('active');
+                    defaultValue.addClass('active');
+            }
+        });
+
+        function responsiveDefaultGrid() {
+            viewSwitcherContainer.removeClass('catalog-content__grid--md catalog-content__grid--lg');
+            viewSwitcherContainer.addClass('catalog-content__grid--sm');
+            viewSwitcher.removeClass('active');
+            $('[data-catalog-content-grid="sm"]').addClass('active');
+        }
+    }
 };
 
 
-// Initialize drop files
-application.prototype.initDropfiles = function () {
-    File.prototype.convertToBase64 = function (callback) {
-        let reader = new FileReader();
 
-        reader.onloadend = function (e) {
-            callback(e.target.result, e.target.error);
-        };
-        reader.readAsDataURL(this);
-    };
-
-    File.prototype.convertToSvgHtml = function (callback) {
-        let reader = new FileReader();
-
-        reader.onloadend = function(e) {
-            callback(e.target.result, e.target.error);
-        }
-        reader.readAsText(this);
-    };
-
-    const getDataImage = (file, callback) => {
-        let filename = file.name,
-            idxDot = filename.lastIndexOf(".") + 1,
-            extFile = filename.substr(idxDot, filename.length).toLowerCase();
-
-        if (extFile === "jpg" || extFile === "jpeg" || extFile === "png") {
-            file.convertToBase64((base64) => {
-                callback(base64, false);
-            })
-        }
-        else if(extFile === "svg") {
-            file.convertToSvgHtml((svgHtml) => {
-                callback(svgHtml, true);
-            })
-        }
-        else {
-            alert('Неверный формат файла (Поддерживаемые форматы: .txt, .text, .doc, .docx, .pdf, .odt)');
-        }
+// Initialize tooltips
+application.prototype.initTooltips = function () {
+    if ($(".tooltip").length) {
+        tippy(".tooltip", {
+            allowHTML: true,
+            trigger: "mouseenter click",
+        });
     }
+};
 
-    const getDataDocs = (file, callback) => {
-        let filename = file.name,
-            idxDot = filename.lastIndexOf(".") + 1,
-            extFile = filename.substr(idxDot, filename.length).toLowerCase();
+// Initialize delete trigger
+application.prototype.initDeleteTrigger = function () {
+    $('[data-delete-trigger]').on("click", function () {
+        $(this).closest('[data-removable]').remove();
+    });
+};
 
-        if (extFile === "txt" || extFile === "text" || extFile === "doc" || extFile === "docx" || extFile === "pdf" || extFile === "odt") {
-            file.convertToBase64((base64) => {
-                callback(base64, false);
-            })
-        }
-        else {
-            alert('Неверный формат файла (Поддерживаемые форматы: .txt, .text, .doc, .docx, .pdf, .odt)');
-        }
+// Initialize checked radio insurances
+application.prototype.initCheckedRadioInsurances = function () {
+    if ($('.custom-radio').length) {
+        $('.custom-radio__input').on('click',function () {
+            let name = $(this).attr('name');
+
+            $('.custom-radio__input[name="' + name + '"]').removeClass('checked');
+            $('.custom-radio__input[name="' + name + '"]').not(this).prop('checked', false);
+            $(this).addClass('checked');
+        });
     }
-
-    $('body').on('dragenter', '.js-drop-file', function (e) {
-        e.stopPropagation();
-        e.preventDefault();
-    });
-
-    $('body').on('dragover', '.js-drop-file', function (e) {
-        e.stopPropagation();
-        e.preventDefault();
-    });
-
-    $('body').on('drop', '.js-drop-file', function (e) {
-        e.stopPropagation();
-        e.preventDefault();
-
-        let type = $(this).closest('.dropfile').attr('data-type');
-
-        /*if (type === 'image') {
-            for (let i in e.originalEvent.dataTransfer.files) {
-                if (e.originalEvent.dataTransfer.files.hasOwnProperty(i)) {
-                    let file = e.originalEvent.dataTransfer.files[i];
-                    getDataImage(file, (data, isSvg) => {
-                        appendImage($(this), data, isSvg);
-                    });
-                }
-            }
-        }
-        else */if (type === 'document') {
-            appendDocument($(this), e.originalEvent.dataTransfer.files);
-        }
-    })
-
-    $('.js-drop-file').on('change', '.js-change-file', function () {
-        let type = $(this).closest('.dropfile').attr('data-type');
-
-        if (type === 'image') {
-            for (let i in $(this)[0].files) {
-                if ($(this)[0].files.hasOwnProperty(i)) {
-                    let file = $(this)[0].files[i];
-                    /*if (type === 'image') {
-                        getDataImage(file, (data, isSvg) => {
-                            appendImage($(this), data, isSvg);
-                        });
-                    }
-                    else */if (type === 'document') {
-                        getDataDocs(file, (data) => {
-                            appendImage($(this), data, isSvg);
-                        });
-                    }
-                }
-            }
-        }
-        else if (type === 'document') {
-            appendDocument($(this), $(this)[0].files);
-        }
-    });
-
-    /*function appendImage($input, data, isSvg) {
-        let image = '',
-            $parent = $input.closest('.dropfile');
-
-        if(isSvg) {
-            image = data;
-        }
-        else {
-            image = `<img src="` + data + `">`;
-        }
-
-        let html = `
-                    <div class="dropfile-image__item">
-                        ` + image + `
-                        <div class="dropfile-image__remove js-remove-image">
-                            <svg class="icon btn__icon 123">
-                                <use href="/local/templates/main/img/sprite.svg#trash"></use>
-                            </svg>
-                        </div>
-                        <input class="js-image" type="hidden" name="` + $parent.attr('data-input-name') + `" value='` + data + `'>
-                    </div>
-                    `;
-
-        if($parent.hasClass('js-upload-cover')) {
-            $parent
-                .find('.dropfile-image')
-                .html(html);
-        }
-        else if($parent.hasClass('js-upload-avatar')) {
-            $parent
-                .find('.dropfile-area')
-                .addClass('dropfile-image')
-                .html(html);
-        }
-        else if($parent.hasClass('js-upload-photos')) {
-            $parent
-                .find('.dropfile-gallery')
-                .show()
-                .append(html);
-        }
-    }*/
-
-    function appendDocument($input, files) {
-        let $parent = $input.closest('.dropfile'),
-            $inputFile = $('<input/>')
-                .attr('type', "file")
-                .attr('multiple', true)
-                .attr('name', $parent.attr('data-input-name'))
-                .hide();
-
-        $inputFile.get(0).files = files;
-
-        for (let i in files) {
-            if (files.hasOwnProperty(i)) {
-                let filename = files[i].name,
-                    idxDot = filename.lastIndexOf(".") + 1,
-                    extFile = filename.substr(idxDot, filename.length).toLowerCase();
-
-                if (extFile === "doc" || extFile === "docx" || extFile === "xls" ||
-                    extFile === "xlsx" || extFile === "ppt" || extFile === "pptx" ||
-                    extFile === "txt" || extFile === "pdf"
-                ) {
-                } else {
-                    alert('Неверный формат файла (Поддерживаемые форматы: doc, docx, xls, xlsx, ppt, pptx, txt, pdf)');
-
-                    return false;
-                }
-            }
-        }
-
-        /*let html = `
-                    <div class="dropfile-attachment__item" data-removable>
-                        <span>
-                            <svg class="icon icon-sm">
-                                <use href="img/sprite.svg#file-text"></use>
-                            </svg>
-                        </span>
-                        <span>` + $parent.attr('data-input-name') + `</span>
-                        <span data-delete-trigger>
-                            <svg class="icon">
-                                <use href="img/sprite.svg#cross"></use>
-                            </svg>
-                        </span>
-                    </div>
-                    `;*/
-
-        let html = ``;
-        for (let i in files) {
-            if (files.hasOwnProperty(i)) {
-                let filename = files[i].name;
-
-                let $parent = $input.closest('.dropfile'),
-                    $inputFile = $('<input/>')
-                        .attr('type', "file")
-                        .attr('multiple', true)
-                        .attr('name', $parent.attr('data-input-name'))
-                        .hide();
-
-                const dataTransfer = new DataTransfer();
-                dataTransfer.items.add(files[i]);
-                $inputFile.get(0).files = dataTransfer.files;
-
-                if ($inputFile.get(0).webkitEntries.length) {
-                    $inputFile.get(0).dataset.file = `${dataTransfer.files[0].name}`;
-                }
-
-                console.log($inputFile.get(0).files)
-
-                $html = $('<div/>')
-                    .addClass('dropfile-documents__item')
-                    .html(`<svg class="icon">
-                                <use href="/local/templates/main/img/sprite.svg#file"></use>
-                            </svg>
-                            <div class="dropfile-documents__name">` + filename + `</div>
-                            <div class="dropfile-documents__remove js-remove-document">
-                                <svg class="icon">
-                                    <use href="/local/templates/main/img/sprite.svg#cross"></use>
-                                </svg>
-                            </div>`)
-                    .append($inputFile)
-
-                $parent.find('.dropfile-documents').append($html);
-            }
-        }
-
-        //$parent.find('.dropfile-documents').append(html);
-    }
-
-
-    $('body').on('click', '.dropfile-image', function (e) {
-        e.preventDefault();
-        e.stopPropagation();
-    });
-
-    $('body').on('click', '.js-remove-image', function (e) {
-        e.preventDefault();
-        e.stopPropagation();
-
-        let $parent = $(this).closest('.dropfile');
-
-        if($parent.hasClass('js-upload-photos')) {
-            $(this).closest('.dropfile-image__item').remove();
-        }
-        else {
-            let html = ``;
-
-            if($parent.hasClass('js-upload-avatar')) {
-                $parent.find('')
-                html += `<div class="dropfile-descr">
-                        <div class="dropfile-descr__view">
-                            <svg class="icon">
-                                <use href="/local/templates/main/img/sprite.svg#add-image"></use>
-                            </svg>
-                        </div>
-                    </div>`
-            }
-
-            $(this).closest('.dropfile-image').html(html);
-
-            if($parent.hasClass('js-upload-avatar')) {
-                $parent.find('.dropfile-area').removeClass('dropfile-image');
-            }
-        }
-    });
-
-    $('body').on('click', '.js-remove-document', function (e) {
-        e.preventDefault();
-        e.stopPropagation();
-
-        console.log('oks')
-        $(this).closest('.dropfile-documents__item').remove();
-    });
 };

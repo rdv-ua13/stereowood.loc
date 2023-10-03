@@ -123,6 +123,7 @@ const includedJsBuild = () => {
             "node_modules/tippy.js/dist/tippy-bundle.umd.js",
             "node_modules/@fancyapps/ui/dist/fancybox.umd.js",
             "node_modules/select2/dist/js/select2.js",
+            "node_modules/readmore-js/readmore.js",
             "node_modules/gsap/dist/gsap.min.js",
         ]
     )
@@ -143,6 +144,7 @@ const libsJsBuild = () => {
             "node_modules/tippy.js/dist/tippy-bundle.umd.js",
             "node_modules/@fancyapps/ui/dist/fancybox.umd.js",
             "node_modules/select2/dist/js/select2.js",
+            "node_modules/readmore-js/readmore.js",
             "node_modules/gsap/dist/gsap.min.js",
         ]
     )
