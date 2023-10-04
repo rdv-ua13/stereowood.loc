@@ -87,6 +87,9 @@
             <br>
 
             <li><a href="catalog.php" target="_blank" class="ready">Каталог</a></li>
+            <li><a href="about.php" target="_blank" class="ready">О компании</a></li>
+            <li><a href="portfolio.php" target="_blank" class="ready">Портфолио</a></li>
+            <li><a href="news.php" target="_blank" class="ready">Новости</a></li>
             <br>
             <br>
 
