@@ -15,9 +15,9 @@
 <div class="gap-xl">
 	<div class="container">
 		<div class="gap-xl">
-			<div class="content-grid">
+			<div class="content-grid content-grid--info">
 				<div class="card card-info">
-					<div class="card__view">
+					<a href="javascript:;" class="card__view">
 						<img
 							loading="lazy"
 							src="img/img-8.jpg"
@@ -26,14 +26,14 @@
 							height="234"
 							alt="Изображение блока"
 						>
-					</div>
+					</a>
 					<div class="card__descr caption-panel">
 						<div class="card__title">Новое общественное пространство набережной Автозаводского района</div>
 						<div class="card__caption">Екатеринбург. 2023</div>
 					</div>
 				</div>
 				<div class="card card-info">
-					<div class="card__view">
+					<a href="javascript:;" class="card__view">
 						<img
 							loading="lazy"
 							src="img/img-8.jpg"
@@ -42,14 +42,14 @@
 							height="234"
 							alt="Изображение блока"
 						>
-					</div>
+					</a>
 					<div class="card__descr caption-panel">
 						<div class="card__title">Детская площадка в ЖК Помидор</div>
 						<div class="card__caption">Санкт-Петербург. 2023</div>
 					</div>
 				</div>
 				<div class="card card-info">
-					<div class="card__view">
+					<a href="javascript:;" class="card__view">
 						<img
 							loading="lazy"
 							src="img/img-8.jpg"
@@ -58,14 +58,14 @@
 							height="234"
 							alt="Изображение блока"
 						>
-					</div>
+					</a>
 					<div class="card__descr caption-panel">
 						<div class="card__title">Спортивная площадка в ЖК Новая гавань </div>
 						<div class="card__caption">Ростов - на - Дону. 2023</div>
 					</div>
 				</div>
 				<div class="card card-info">
-					<div class="card__view">
+					<a href="javascript:;" class="card__view">
 						<img
 							loading="lazy"
 							src="img/img-8.jpg"
@@ -74,7 +74,7 @@
 							height="234"
 							alt="Изображение блока"
 						>
-					</div>
+					</a>
 					<div class="card__descr caption-panel">
 						<div class="card__title">Новое общественное пространство набережной Автозаводского района</div>
 						<div class="card__caption">Екатеринбург. 2023</div>

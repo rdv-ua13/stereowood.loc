@@ -15,6 +15,7 @@ application.prototype.init = function () {
     this.initDropdownMenu();
     this.initDropdownMenuOffset();
     this.initHeaderContactsAs();
+    this.initHeaderSearch();
     /*this.initMaskedInput(); not works*/
     this.initBasicSlider();
     this.initSliders();
@@ -30,6 +31,7 @@ application.prototype.init = function () {
     this.initTooltips();
     this.initDeleteTrigger();
     this.initCheckedRadioInsurances();
+    this.initContactsMap();
 };
 
 // Initialize device check
@@ -243,6 +245,47 @@ application.prototype.initHeaderContactsAs = function () {
         $(document).on('keyup', function (e) {
             if (e.key == 'Escape') {
                 spoiler.siblings('.header-contacts__list').removeClass('active');
+            }
+        });
+    }
+};
+
+// Initialize header search
+application.prototype.initHeaderSearch = function () {
+    if ($('.header-search').length) {
+        let spoiler = $('.header-search-spoiler');
+        let form = $('.header-search-form');
+
+        spoiler.on('click', function () {
+            if (!spoiler.next('.header-search-form').hasClass('active')) {
+                spoiler.addClass('active');
+                spoiler.next('.header-search-form').addClass('active');
+                spoiler.closest('.header-actions__list').addClass('searching');
+            } else if (spoiler.next('.header-search-form').hasClass('active')) {
+                spoiler.removeClass('active');
+                spoiler.next('.header-search-form').removeClass('active');
+                spoiler.closest('.header-actions__list').removeClass('searching');
+            }
+        });
+
+        $(document).on('click', function (e) {
+            if (!spoiler.is(e.target) &&
+                !form.is(e.target) &&
+                form.has(e.target).length === 0)
+            {
+                spoiler.removeClass('active');
+                spoiler.siblings('.header-search-form').removeClass('active');
+                spoiler.siblings('.header-search-form .input-search').val();
+                spoiler.closest('.header-actions__list').removeClass('searching');
+            }
+        });
+
+        $(document).on('keyup', function (e) {
+            if (e.key == 'Escape') {
+                spoiler.removeClass('active');
+                spoiler.siblings('.header-search-form').removeClass('active');
+                spoiler.siblings('.header-search-form .input-search').val();
+                spoiler.closest('.header-actions__list').removeClass('searching');
             }
         });
     }
@@ -648,5 +691,93 @@ application.prototype.initCheckedRadioInsurances = function () {
             $('.custom-radio__input[name="' + name + '"]').not(this).prop('checked', false);
             $(this).addClass('checked');
         });
+    }
+};
+
+// Initialize contacts map
+application.prototype.initContactsMap = function () {
+    if ($('.contacts__map').length) {
+        ymaps.ready(init);
+
+        let map,
+            placemark,
+            iconContentLayout,
+            mapItem = $('.contacts__map-content');
+
+        function init () {
+            mapItem.each(function (i) {
+                mapItem.eq(i).attr('id', 'contactsMap' + i);
+
+                let coordX = $(this).data('x'),
+                    coordY = $(this).data('y'),
+                    hint = $(this).data('hint'),
+                    zoomControl = new ymaps.control.ZoomControl({
+                        options: {
+                            size: 'large',
+                            float: 'none',
+                            position: {
+                                top: 50,
+                                right: 10,
+                                left: 'auto',
+                            },
+                        }
+                    });
+
+                // Параметры карты можно задать в конструкторе.
+                map = new ymaps.Map(
+                    // ID DOM-элемента, в который будет добавлена карта.
+                    'contactsMap' + i,
+                    // Параметры карты.
+                    {
+                        // Географические координаты центра отображаемой карты.
+                        center: [
+                            coordX,
+                            coordY
+                        ],
+                        // Масштаб.
+                        zoom: 15,
+                        controls: ['fullscreenControl'],
+                    }, {
+                        // Поиск по организациям.
+                        searchControlProvider: 'yandex#search'
+                    }
+                );
+
+                // Создаём макет содержимого.
+                iconContentLayout = ymaps.templateLayoutFactory.createClass(
+                    '<div class="placemark">' +
+                    '                <div class="placemark-icon">' +
+                    '                    <svg class="icon">' +
+                    '                        <use href="img/sprite.svg#advantage-buildings-white"></use>' +
+                    '                    </svg>' +
+                    '                    <div class="placemark-icon-arrow"></div>' +
+                    '                </div>' +
+                    '                <div class="placemark-point"></div>' +
+                    '            </div>'
+                );
+
+                placemark = new ymaps.Placemark([coordX, coordY], {
+                    hintContent: hint
+                }, {
+                    // Опции.
+                    // Необходимо указать данный тип макета.
+                    iconLayout: 'default#imageWithContent',
+                    // Своё изображение иконки метки.
+                    iconImageHref: '',
+                    // Размеры метки.
+                    iconImageSize: [48, 48],
+                    // Смещение левого верхнего угла иконки относительно
+                    // её "ножки" (точки привязки).
+                    iconImageOffset: [-24, -24],
+                    // Смещение слоя с содержимым относительно слоя с картинкой.
+                    iconContentOffset: [15, 15],
+                    // Макет содержимого.
+                    iconContentLayout: iconContentLayout
+                });
+
+                map.geoObjects.add(placemark);
+                map.controls.add(zoomControl);
+            });
+        }
     }
 };

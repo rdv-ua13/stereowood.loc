@@ -39,18 +39,18 @@
     <script defer src="js/readmore.js"></script>    <!-- readmore -->
     <script defer src="js/gsap.min.js"></script>    <!-- gsap -->
 
-    <!--<script defer src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>-->
+    <script defer src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
 
     <script defer src="js/main.js"></script>
 </head>
 
 <? if(strpos($_SERVER["REQUEST_URI"], "index.php")) : ?> <?/*<? if($APPLICATION->GetCurDir() != "/") : ?>*/?>
 <body class="index">
-    <header class="header"> <?/* fixed-block header-transparent header-transparent--desktop dark-bg dark-bg--desktop*/?>
+    <header class="header">
 <? else : ?>
 <body>
-    <header class="header">
 <? endif; ?>
+    <header class="header">
         <div class="header-topline">
             <div class="container header-container">
                 <div class="header-menu">
@@ -305,42 +305,36 @@
                         </button>
                     </div>
                     <ul class="list-reset header-actions__list">
-                        <li>
-                            <a href="javascript:;" class="link">
-                                <svg class="icon">
+                        <li class="header-actions__item header-search">
+                            <div class="header-search-spoiler">
+                                <svg class="icon btn__icon icon-md icon-default">
                                     <use href="img/sprite.svg#search"></use>
                                 </svg>
-                                <?/*<form id="" class="header-search form" method="" action="javascript:;">
-									<div class="input-wrapper input-search-wrapper">
-										<input
-												class="input-reset input input-search"
-												type="search"
-												name="Поиск"
-												placeholder="Поиск по каталогу..."
-												autocomplete="off"
-										>
-										<button class="btn-reset btn btn-link input-delete-btn">
-											<svg class="icon btn__icon icon-xs">
-												<use href="img/sprite.svg#cross"></use>
-											</svg>
-										</button>
-										<button class="btn-reset btn btn-primary input-search-btn input-search-btn--square" type="submit">
-											<svg class="icon btn__icon">
-												<use href="img/sprite.svg#search"></use>
-											</svg>
-										</button>
-									</div>
-								</form>*/?>
-                            </a>
+                                <svg class="icon btn__icon icon-md icon-selected">
+                                    <use href="img/sprite.svg#cross"></use>
+                                </svg>
+                            </div>
+                            <form id="" class="header-search-form form" method="" action="javascript:;">
+                                <div class="input-wrapper input-search-wrapper">
+                                    <input
+                                            class="input-reset input input-search"
+                                            type="search"
+                                            name=""
+                                            placeholder="Удобный поиск по всему ассортименту"
+                                            autocomplete="off"
+                                    >
+                                    <button class="btn-reset btn btn-secondary input-search-btn" type="submit">Найти</button>
+                                </div>
+                            </form>
                         </li>
-                        <li class="header-profile not-logged">
+                        <li class="header-actions__item header-profile not-logged">
                             <a href="javascript:;" class="link">
                                 <svg class="icon">
                                     <use href="img/sprite.svg#user"></use>
                                 </svg>
                             </a>
                         </li>
-                        <li>
+                        <li class="header-actions__item header-cart">
                             <a href="javascript:;" class="link">
                                 <svg class="icon">
                                     <use href="img/sprite.svg#cart"></use>

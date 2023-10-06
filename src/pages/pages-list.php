@@ -70,7 +70,7 @@
     <body>
     <div style="display: flex; align-items:center; margin: 0 0 15px 20px;">
         <div class="logo">
-            <img src="img/logo-dark.svg" width="180" height="50" alt="Логотип компании">
+            <img src="img/logo.svg" width="180" height="50" alt="Логотип компании">
         </div>
         <span style="display: inline-flex; align-items:center; font-size: 24px;">
             <span style="color: forestgreen; font-weight: 600;">n + ui</span>
@@ -90,6 +90,9 @@
             <li><a href="about.php" target="_blank" class="ready">О компании</a></li>
             <li><a href="portfolio.php" target="_blank" class="ready">Портфолио</a></li>
             <li><a href="news.php" target="_blank" class="ready">Новости</a></li>
+            <li><a href="site-search.php" target="_blank" class="ready">Поиск по сайту</a></li>
+            <li><a href="contacts.php" target="_blank" class="ready">Контакты</a></li>
+            <li><a href="delivery.php" target="_blank" class="ready">Доставка</a></li>
             <br>
             <br>
 

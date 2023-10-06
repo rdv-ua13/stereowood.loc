@@ -234,10 +234,10 @@ body:not(.is-using-mouse) {
 @media (min-width: 1200px) {
 	.logo {
 		.image {
-			min-width: 307px;
-			width: 307px;
-			min-height: 64px;
-			height: 64px;
+			min-width: 310px;
+			width: 310px;
+			min-height: 62px;
+			height: 62px;
 		}
 	}
 }
@@ -1200,12 +1200,24 @@ input.disabled {
 }
 @media (min-width: 992px) {
 	.content-grid {
-		gap: 48px 16px;
+		&:not(.content-grid--info),
+		&--product {
+			gap: 24px 16px;
+		}
+		&--info {
+			gap: 48px 16px;
+		}
 	}
 }
 @media (max-width: 991.98px) {
 	.content-grid {
-		gap: 32px 12px;
+		&:not(.content-grid--info),
+		&--product {
+			gap: 20px 12px;
+		}
+		&--info {
+			gap: 32px 12px;
+		}
 	}
 }
 

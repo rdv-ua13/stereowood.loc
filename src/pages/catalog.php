@@ -286,7 +286,7 @@
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
                                         <div class="card card-product">
-                                            <div class="card__view">
+                                            <a href="javascript:;" class="card__view">
                                                 <img
                                                         loading="lazy"
                                                         src="img/card-img-1.jpg"
@@ -299,7 +299,7 @@
                                                     <span class="sale-label sale-label-red">20%</span>
                                                     <span class="sale-label sale-label-green">Новинка</span>
                                                 </div>
-                                            </div>
+                                            </a>
                                             <div class="card__descr">
                                                 <div class="card__caption">Детские игровые комплексы</div>
                                                 <a href="javascript:;" class="card__title">Игровой комплекс ARTWOOD «Корабль Венеция» с горкой и комплекс с горкой</a>
@@ -336,7 +336,7 @@
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="card card-product">
-                                            <div class="card__view">
+                                            <a href="javascript:;" class="card__view">
                                                 <img
                                                         loading="lazy"
                                                         src="img/card-img-2.jpg"
@@ -348,7 +348,7 @@
                                                 <div class="card__sale-label">
                                                     <span class="sale-label sale-label-green">Новинка</span>
                                                 </div>
-                                            </div>
+                                            </a>
                                             <div class="card__descr">
                                                 <div class="card__caption">Теннисные столы</div>
                                                 <a href="javascript:;" class="card__title">Стол теннисный для парка «Паркер»</a>
@@ -385,7 +385,7 @@
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="card card-product">
-                                            <div class="card__view">
+                                            <a href="javascript:;" class="card__view">
                                                 <img
                                                         loading="lazy"
                                                         src="img/card-img-3.jpg"
@@ -397,7 +397,7 @@
                                                 <div class="card__sale-label">
                                                     <span class="sale-label sale-label-green">Новинка</span>
                                                 </div>
-                                            </div>
+                                            </a>
                                             <div class="card__descr">
                                                 <div class="card__caption">Оборудование для воркаута</div>
                                                 <a href="javascript:;" class="card__title">Спортивный комплекс для занятий воркаутом «Фристайл-15»</a>
@@ -434,7 +434,7 @@
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="card card-product">
-                                            <div class="card__view">
+                                            <a href="javascript:;" class="card__view">
                                                 <img
                                                         loading="lazy"
                                                         src="img/card-img-4.jpg"
@@ -446,7 +446,7 @@
                                                 <div class="card__sale-label">
                                                     <span class="sale-label sale-label-green">Новинка</span>
                                                 </div>
-                                            </div>
+                                            </a>
                                             <div class="card__descr">
                                                 <div class="card__caption">Скамейки</div>
                                                 <a href="javascript:;" class="card__title">Скамейка стальная «Модерн»</a>
@@ -483,7 +483,7 @@
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="card card-product">
-                                            <div class="card__view">
+                                            <a href="javascript:;" class="card__view">
                                                 <img
                                                         loading="lazy"
                                                         src="img/card-img-1.jpg"
@@ -495,7 +495,7 @@
                                                 <div class="card__sale-label">
                                                     <span class="sale-label sale-label-green">Новинка</span>
                                                 </div>
-                                            </div>
+                                            </a>
                                             <div class="card__descr">
                                                 <div class="card__caption">Детские игровые комплексы</div>
                                                 <a href="javascript:;" class="card__title">Игровой комплекс ARTWOOD «Корабль Венеция» с горкой и ...</a>
@@ -611,7 +611,7 @@
                 <div class="catalog-content__layout">
                     <div class="catalog-content__grid catalog-content__grid--sm" data-catalog-content-view>
                         <div class="card card-product">
-                            <div class="card__view">
+                            <a href="javascript:;" class="card__view">
                                 <img
                                         loading="lazy"
                                         src="img/card-img-1.jpg"
@@ -624,7 +624,7 @@
                                     <span class="sale-label sale-label-red">20%</span>
                                     <span class="sale-label sale-label-green">Новинка</span>
                                 </div>
-                            </div>
+                            </a>
                             <div class="card__descr">
                                 <div class="card__caption">Детские игровые комплексы</div>
                                 <a href="javascript:;" class="card__title">Игровой комплекс ARTWOOD «Корабль Венеция» с горкой и комплекс с горкой</a>
@@ -659,7 +659,7 @@
                             </div>
                         </div>
                         <div class="card card-product">
-                            <div class="card__view">
+                            <a href="javascript:;" class="card__view">
                                 <img
                                         loading="lazy"
                                         src="img/card-img-2.jpg"
@@ -671,7 +671,7 @@
                                 <div class="card__sale-label">
                                     <span class="sale-label sale-label-green">Новинка</span>
                                 </div>
-                            </div>
+                            </a>
                             <div class="card__descr">
                                 <div class="card__caption">Теннисные столы</div>
                                 <a href="javascript:;" class="card__title">Стол теннисный для парка «Паркер»</a>
@@ -706,7 +706,7 @@
                             </div>
                         </div>
                         <div class="card card-product">
-                            <div class="card__view">
+                            <a href="javascript:;" class="card__view">
                                 <img
                                         loading="lazy"
                                         src="img/card-img-3.jpg"
@@ -718,7 +718,7 @@
                                 <div class="card__sale-label">
                                     <span class="sale-label sale-label-green">Новинка</span>
                                 </div>
-                            </div>
+                            </a>
                             <div class="card__descr">
                                 <div class="card__caption">Оборудование для воркаута</div>
                                 <a href="javascript:;" class="card__title">Спортивный комплекс для занятий воркаутом «Фристайл-15»</a>
@@ -753,7 +753,7 @@
                             </div>
                         </div>
                         <div class="card card-product">
-                            <div class="card__view">
+                            <a href="javascript:;" class="card__view">
                                 <img
                                         loading="lazy"
                                         src="img/card-img-4.jpg"
@@ -765,7 +765,7 @@
                                 <div class="card__sale-label">
                                     <span class="sale-label sale-label-green">Новинка</span>
                                 </div>
-                            </div>
+                            </a>
                             <div class="card__descr">
                                 <div class="card__caption">Скамейки</div>
                                 <a href="javascript:;" class="card__title">Скамейка стальная «Модерн»</a>
@@ -800,7 +800,7 @@
                             </div>
                         </div>
                         <div class="card card-product">
-                            <div class="card__view">
+                            <a href="javascript:;" class="card__view">
                                 <img
                                         loading="lazy"
                                         src="img/card-img-1.jpg"
@@ -812,7 +812,7 @@
                                 <div class="card__sale-label">
                                     <span class="sale-label sale-label-green">Новинка</span>
                                 </div>
-                            </div>
+                            </a>
                             <div class="card__descr">
                                 <div class="card__caption">Детские игровые комплексы</div>
                                 <a href="javascript:;" class="card__title">Игровой комплекс ARTWOOD «Корабль Венеция» с горкой и ...</a>
@@ -970,7 +970,7 @@
 							<div class="swiper-wrapper card-list card-list--desktop">
 								<div class="swiper-slide">
 									<div class="card card-info">
-										<div class="card__view">
+										<a href="javascript:;" class="card__view">
 											<img
 												loading="lazy"
 												src="img/img-8.jpg"
@@ -979,7 +979,7 @@
 												height="234"
 												alt="Изображение блока"
 											>
-										</div>
+										</a>
 										<div class="card__descr caption-panel">
 											<div class="card__title">Новое общественное пространство набережной Автозаводского района</div>
 											<div class="card__caption">Екатеринбург. 2023</div>
@@ -988,7 +988,7 @@
 								</div>
 								<div class="swiper-slide">
 									<div class="card card-info">
-										<div class="card__view">
+										<a href="javascript:;" class="card__view">
 											<img
 												loading="lazy"
 												src="img/img-8.jpg"
@@ -997,7 +997,7 @@
 												height="234"
 												alt="Изображение блока"
 											>
-										</div>
+										</a>
 										<div class="card__descr caption-panel">
 											<div class="card__title">Детская площадка в ЖК Помидор</div>
 											<div class="card__caption">Санкт-Петербург. 2023</div>
@@ -1006,7 +1006,7 @@
 								</div>
 								<div class="swiper-slide">
 									<div class="card card-info">
-										<div class="card__view">
+										<a href="javascript:;" class="card__view">
 											<img
 												loading="lazy"
 												src="img/img-8.jpg"
@@ -1015,7 +1015,7 @@
 												height="234"
 												alt="Изображение блока"
 											>
-										</div>
+										</a>
 										<div class="card__descr caption-panel">
 											<div class="card__title">Спортивная площадка в ЖК Новая гавань </div>
 											<div class="card__caption">Ростов - на - Дону. 2023</div>
@@ -1024,7 +1024,7 @@
 								</div>
 								<div class="swiper-slide">
 									<div class="card card-info">
-										<div class="card__view">
+										<a href="javascript:;" class="card__view">
 											<img
 												loading="lazy"
 												src="img/img-8.jpg"
@@ -1033,7 +1033,7 @@
 												height="234"
 												alt="Изображение блока"
 											>
-										</div>
+										</a>
 										<div class="card__descr caption-panel">
 											<div class="card__title">Новое общественное пространство набережной Автозаводского района</div>
 											<div class="card__caption">Екатеринбург. 2023</div>
