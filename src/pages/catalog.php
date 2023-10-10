@@ -281,8 +281,8 @@
             <div class="catalog-content">
                 <div class="catalog-content__top">
                     <div class="catalog-content__section">
-                        <div class="catalog-content__section-slider-pagination basic-slider-wrap">
-                            <div class="basic-slider basic-slider-out-container basic-slider-desktop swiper popular-product-slider" data-basic-slider>
+                        <div class="slider-out basic-slider-wrap basic-slider-wrap-pagination">
+                            <div class="basic-slider basic-slider-mobile basic-slider-desktop basic-slider--cp-preview basic-slider--shadow swiper" data-basic-slider>
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
                                         <div class="card card-product">
@@ -553,6 +553,10 @@
                         </button>
                     </div>
                     <div class="catalog-content-settings">
+                        <button class="btn-reset btn catalog-content-filter-spoiler" data-filter-spoiler>
+                            <span>Фильтр</span>
+                        </button>
+
                         <div class="catalog-content-settings__view">
                             <div class="catalog-content-settings__view-title">Показывать по:</div>
                             <div class="catalog-content-settings__view-item active" data-catalog-content-grid="sm">12</div>
@@ -598,14 +602,6 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="catalog-content-filter-spoiler" data-filter-spoiler>
-                        <div class="catalog-content-filter-spoiler__view">
-                            <svg class="icon">
-                                <use href="img/sprite.svg#filter"></use>
-                            </svg>
-                        </div>
-                        <span>Фильтры</span>
                     </div>
                 </div>
                 <div class="catalog-content__layout">
@@ -964,86 +960,84 @@
 					<div class="h3">Портфолио</div>
 				</div>
 
-				<div class="catalog-extra-slider out-container-x">
-					<div class="basic-slider-wrap">
-						<div class="basic-slider basic-slider-mobile swiper" data-basic-slider>
-							<div class="swiper-wrapper card-list card-list--desktop">
-								<div class="swiper-slide">
-									<div class="card card-info">
-										<a href="javascript:;" class="card__view">
-											<img
-												loading="lazy"
-												src="img/img-8.jpg"
-												class="image"
-												width="416"
-												height="234"
-												alt="Изображение блока"
-											>
-										</a>
-										<div class="card__descr caption-panel">
-											<div class="card__title">Новое общественное пространство набережной Автозаводского района</div>
-											<div class="card__caption">Екатеринбург. 2023</div>
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="card card-info">
-										<a href="javascript:;" class="card__view">
-											<img
-												loading="lazy"
-												src="img/img-8.jpg"
-												class="image"
-												width="416"
-												height="234"
-												alt="Изображение блока"
-											>
-										</a>
-										<div class="card__descr caption-panel">
-											<div class="card__title">Детская площадка в ЖК Помидор</div>
-											<div class="card__caption">Санкт-Петербург. 2023</div>
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="card card-info">
-										<a href="javascript:;" class="card__view">
-											<img
-												loading="lazy"
-												src="img/img-8.jpg"
-												class="image"
-												width="416"
-												height="234"
-												alt="Изображение блока"
-											>
-										</a>
-										<div class="card__descr caption-panel">
-											<div class="card__title">Спортивная площадка в ЖК Новая гавань </div>
-											<div class="card__caption">Ростов - на - Дону. 2023</div>
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="card card-info">
-										<a href="javascript:;" class="card__view">
-											<img
-												loading="lazy"
-												src="img/img-8.jpg"
-												class="image"
-												width="416"
-												height="234"
-												alt="Изображение блока"
-											>
-										</a>
-										<div class="card__descr caption-panel">
-											<div class="card__title">Новое общественное пространство набережной Автозаводского района</div>
-											<div class="card__caption">Екатеринбург. 2023</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+                <div class="slider-out basic-slider-wrap">
+                    <div class="basic-slider basic-slider-mobile swiper" data-basic-slider>
+                        <div class="swiper-wrapper card-list card-list--desktop">
+                            <div class="swiper-slide">
+                                <div class="card card-info">
+                                    <a href="javascript:;" class="card__view">
+                                        <img
+                                                loading="lazy"
+                                                src="img/img-8.jpg"
+                                                class="image"
+                                                width="416"
+                                                height="234"
+                                                alt="Изображение блока"
+                                        >
+                                    </a>
+                                    <div class="card__descr caption-panel">
+                                        <div class="card__title">Новое общественное пространство набережной Автозаводского района</div>
+                                        <div class="card__caption">Екатеринбург. 2023</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card card-info">
+                                    <a href="javascript:;" class="card__view">
+                                        <img
+                                                loading="lazy"
+                                                src="img/img-8.jpg"
+                                                class="image"
+                                                width="416"
+                                                height="234"
+                                                alt="Изображение блока"
+                                        >
+                                    </a>
+                                    <div class="card__descr caption-panel">
+                                        <div class="card__title">Детская площадка в ЖК Помидор</div>
+                                        <div class="card__caption">Санкт-Петербург. 2023</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card card-info">
+                                    <a href="javascript:;" class="card__view">
+                                        <img
+                                                loading="lazy"
+                                                src="img/img-8.jpg"
+                                                class="image"
+                                                width="416"
+                                                height="234"
+                                                alt="Изображение блока"
+                                        >
+                                    </a>
+                                    <div class="card__descr caption-panel">
+                                        <div class="card__title">Спортивная площадка в ЖК Новая гавань </div>
+                                        <div class="card__caption">Ростов - на - Дону. 2023</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card card-info">
+                                    <a class="card__view">
+                                        <img
+                                                loading="lazy"
+                                                src="img/img-8.jpg"
+                                                class="image"
+                                                width="416"
+                                                height="234"
+                                                alt="Изображение блока"
+                                        >
+                                    </a>
+                                    <div class="card__descr caption-panel">
+                                        <div class="card__title">Новое общественное пространство набережной Автозаводского района</div>
+                                        <div class="card__caption">Екатеринбург. 2023</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 			</div>
 			<div class="more-link w-100">
 				<button class="btn-reset btn btn-primary">

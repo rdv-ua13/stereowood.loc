@@ -200,6 +200,9 @@
                     <pre>
 @media (min-width: 992px) {
     .gap {
+        &-xxs {
+			margin-bottom: 8px !important;
+		}
         &-xs {
             margin-bottom: 12px !important;
         }

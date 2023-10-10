@@ -87,9 +87,12 @@
             <br>
 
             <li><a href="catalog.php" target="_blank" class="ready">Каталог</a></li>
+            <li><a href="product-card.php" target="_blank" class="ready" style="color: red;">Карточка товара</a></li>
             <li><a href="about.php" target="_blank" class="ready">О компании</a></li>
             <li><a href="portfolio.php" target="_blank" class="ready">Портфолио</a></li>
+            <li><a href="portfolio-details.php" target="_blank" class="ready">Портфолио - детальная</a></li>
             <li><a href="news.php" target="_blank" class="ready">Новости</a></li>
+            <li><a href="news-details.php" target="_blank" class="ready" style="color: red;">Новости - детальная</a></li>
             <li><a href="site-search.php" target="_blank" class="ready">Поиск по сайту</a></li>
             <li><a href="contacts.php" target="_blank" class="ready">Контакты</a></li>
             <li><a href="delivery.php" target="_blank" class="ready">Доставка</a></li>

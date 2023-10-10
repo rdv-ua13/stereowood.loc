@@ -46,7 +46,6 @@
 
 <? if(strpos($_SERVER["REQUEST_URI"], "index.php")) : ?> <?/*<? if($APPLICATION->GetCurDir() != "/") : ?>*/?>
 <body class="index">
-    <header class="header">
 <? else : ?>
 <body>
 <? endif; ?>

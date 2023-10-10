@@ -323,7 +323,6 @@ application.prototype.initBasicSlider = function () {
                     },
                 }
             };
-            let basicSlider = new Swiper('.basic-slider-wrap-' + i + ' .basic-slider.basic-slider-desktop', basicSliderSetting);
 
             reinitSlider();
             $(window).on("resize", reinitSlider);
@@ -351,7 +350,7 @@ application.prototype.initSliders = function () {
             direction: 'horizontal',
             pagination: {
                 el: ".index-slider-wrapper .swiper-pagination",
-                type: 'bullets',
+                type: 'bullets'
             }
         });
     }
@@ -359,7 +358,38 @@ application.prototype.initSliders = function () {
     if ($('.nav-breadcrumbs').length) {
         let sliderNavBreadcrumbs = new Swiper('.nav-breadcrumbs', {
             spaceBetween: 0,
+            slidesPerView: 'auto'
+        });
+    }
+
+    if ($('.details-slider').length) {
+        let detailsSlider = new Swiper('.details-slider', {
             slidesPerView: 'auto',
+            spaceBetween: 12,
+            navigation: {
+                nextEl: '.details-slider .swiper-button-next',
+                prevEl: '.details-slider .swiper-button-prev',
+            }
+        });
+    }
+
+    if ($('.details-thumb-slider').length) {
+        let detailsThumbSliderPointer = new Swiper('.details-thumb-slider-pointer', {
+            slidesPerView: 'auto',
+            spaceBetween: 16,
+            freeMode: true,
+            watchSlidesProgress: true
+        });
+        let detailsThumbSlider = new Swiper('.details-thumb-slider', {
+            slidesPerView: 'auto',
+            spaceBetween: 12,
+            navigation: {
+                nextEl: '.details-thumb-slider .swiper-button-next',
+                prevEl: '.details-thumb-slider .swiper-button-prev',
+            },
+            thumbs: {
+                swiper: detailsThumbSliderPointer,
+            }
         });
     }
 };
