@@ -282,7 +282,7 @@
                 <div class="catalog-content__top">
                     <div class="catalog-content__section">
                         <div class="slider-out basic-slider-wrap basic-slider-wrap-pagination">
-                            <div class="basic-slider basic-slider-mobile basic-slider-desktop basic-slider--cp-preview basic-slider--shadow swiper" data-basic-slider>
+                            <div class="basic-slider basic-slider-mobile basic-slider-desktop basic-slider--cp-preview basic-slider--shadow basic-slider-nav--desktop swiper" data-basic-slider>
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
                                         <div class="card card-product">
@@ -529,6 +529,22 @@
                                                 </div>
                                             </div>
                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-navigation">
+                                <div class="swiper-button-next">
+                                    <div class="swiper-button-design">
+                                        <svg class="icon icon-md">
+                                            <use href="img/sprite.svg#chevron-down"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="swiper-button-prev">
+                                    <div class="swiper-button-design">
+                                        <svg class="icon icon-md">
+                                            <use href="img/sprite.svg#chevron-down"></use>
+                                        </svg>
                                     </div>
                                 </div>
                             </div>

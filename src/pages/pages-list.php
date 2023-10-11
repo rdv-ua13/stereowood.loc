@@ -73,9 +73,9 @@
             <img src="img/logo.svg" width="180" height="50" alt="Логотип компании">
         </div>
         <span style="display: inline-flex; align-items:center; font-size: 24px;">
-            <span style="color: forestgreen; font-weight: 600;">n + ui</span>
+            <span style="color: forestgreen; font-weight: 600;">11 + ui</span>
             &nbsp;/&nbsp;
-            <span style="font-size: 24px;">n + ui (всего страниц в макете)</span>
+            <span style="font-size: 24px;">18 + ui (всего страниц в макете)</span>
         </span>
     </div>
     <div style="font-size: 24px;">Готовые разделы отмечены "<span class="block-ready">Блок готов</span>"</div>
@@ -87,12 +87,12 @@
             <br>
 
             <li><a href="catalog.php" target="_blank" class="ready">Каталог</a></li>
-            <li><a href="product-card.php" target="_blank" class="ready" style="color: red;">Карточка товара</a></li>
+            <li><a href="product-card.php" target="_blank" class="ready">Карточка товара</a></li>
             <li><a href="about.php" target="_blank" class="ready">О компании</a></li>
             <li><a href="portfolio.php" target="_blank" class="ready">Портфолио</a></li>
             <li><a href="portfolio-details.php" target="_blank" class="ready">Портфолио - детальная</a></li>
             <li><a href="news.php" target="_blank" class="ready">Новости</a></li>
-            <li><a href="news-details.php" target="_blank" class="ready" style="color: red;">Новости - детальная</a></li>
+            <li><a href="news-details.php" target="_blank" class="ready">Новости - детальная</a></li>
             <li><a href="site-search.php" target="_blank" class="ready">Поиск по сайту</a></li>
             <li><a href="contacts.php" target="_blank" class="ready">Контакты</a></li>
             <li><a href="delivery.php" target="_blank" class="ready">Доставка</a></li>

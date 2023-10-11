@@ -218,7 +218,7 @@
                 </div>
 			</div>
 			<div class="details-descr details-descr--offset">
-                <div class="gap-xs details-caption">
+                <div class="gap-xxs details-caption">
                     <span>23 января 2023</span>
                 </div>
                 <div class="gap-md">

@@ -192,7 +192,7 @@
             </div>
 
             <div class="basic-slider-wrap">
-                <div class="basic-slider basic-slider-desktop basic-slider--dropout swiper product-slider" data-basic-slider>
+                <div class="basic-slider basic-slider-desktop basic-slider--dropout basic-slider-nav--desktop swiper product-slider" data-basic-slider>
                     <div class="swiper-wrapper card-list card-list--mobile">
                         <div class="swiper-slide">
                             <div class="card card-product">

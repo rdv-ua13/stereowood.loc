@@ -32,6 +32,8 @@ application.prototype.init = function () {
     this.initDeleteTrigger();
     this.initCheckedRadioInsurances();
     this.initContactsMap();
+    this.initAccordion();
+    this.initCartQuantity();
 };
 
 // Initialize device check
@@ -809,5 +811,102 @@ application.prototype.initContactsMap = function () {
                 map.controls.add(zoomControl);
             });
         }
+    }
+};
+
+// Initialize accordion
+application.prototype.initAccordion = function () {
+    if ($(".accordion").length) {
+        initAccordionResponsive();
+        $(window).on("resize", initAccordionResponsive, reloadAccordionResponsive);
+
+        function reloadAccordionResponsive() {
+            setTimeout(function () {
+                location.reload();
+            }, 300);
+        }
+        function initAccordionResponsive() {
+            $(".accordion__collapse").hide();
+
+            $(".js-accordion-btn").on("click", function () {
+                if (!$(this).hasClass("open")) {
+                    $(this).addClass("open");
+                    $(this).closest(".accordion__item").addClass("active");
+                    $(this).closest(".accordion__item").find(".accordion__collapse").removeClass("collapsed");
+                    $(this).closest(".accordion__item").find(".accordion__collapse").slideDown(160);
+                } else if ($(this).hasClass("open")) {
+                    $(this).removeClass("open");
+                    $(this).closest(".accordion__item").removeClass("active");
+                    $(this).closest(".accordion__item").find(".accordion__collapse").slideUp(160);
+                    setTimeout(function () {
+                        $(this).closest(".accordion__item").find(".accordion__collapse").addClass("collapsed");
+                    }, 160);
+                }
+            });
+        }
+    }
+};
+
+// Initialize cart quantity
+application.prototype.initCartQuantity = function () {
+    if ($('.cart-quantity').length) {
+        /*$('.cart-buy .cart-in').on("click", function() {
+            if(!$(this).hasClass('active')) {
+                $(this).addClass('active');
+                $(this).closest('.cart-buy').find('.cart-quantity').removeClass('disabled');
+                $(this).closest('.cart-buy').find('.cart-quantity-btn--remove').addClass('selected');
+            } else {
+                $(this).removeClass('active');
+                $(this).closest('.cart-buy').find('.cart-quantity').addClass('disabled');
+                $(this).closest('.cart-buy').find('.cart-quantity-btn--remove').removeClass('selected');
+                $(this).closest('.cart-buy').find('input.cart-quantity-input').val(1);
+            }
+        });*/
+
+        $(document).on('click','.cart-quantity-btn--remove', function() {
+            if ($(this).hasClass('selected')) {
+                $(this).removeClass('selected');
+                $(this).closest('.cart-buy').find('.cart-in').removeClass('active');
+                $(this).closest('.cart-quantity').addClass('disabled');
+            }
+        });
+
+        $(document).on('click', '.cart-quantity-btn', function(e) {
+            let button = $(this);
+            let oldValue = button.closest('.cart-quantity').find('input.cart-quantity-input').val();
+            let mult = parseInt(button.closest('.cart-quantity').find('input.cart-quantity-input').data('mult'));
+            let newVal = null;
+
+            if(mult <= 0 || isNaN(mult)) {
+                mult = 1;
+            }
+
+            if(button.data('value') === 'qty-add') {
+                newVal = parseInt(oldValue) + mult;
+
+                if(newVal > 1) {
+                    $(this).closest('.cart-quantity').find('.cart-quantity-btn--remove').removeClass('selected');
+                } else {
+                    $(this).closest('.cart-quantity').find('.cart-quantity-btn--remove').addClass('selected');
+                }
+            } else {
+                if (oldValue > 0) {
+                    newVal = parseInt(oldValue) - mult;
+                    $(this).closest('.cart-quantity').find('.cart-quantity-btn--remove').removeClass('selected');
+
+                    if(oldValue > 1 && oldValue < 3) {
+                        $(this).closest('.cart-quantity').find('.cart-quantity-btn--remove').addClass('selected');
+                    }
+                } else {
+                    newVal = 0;
+                }
+            }
+
+            if(newVal == 0) {
+                newVal = mult;
+            }
+
+            button.closest('.cart-quantity').find('input.cart-quantity-input').val(newVal).trigger('change');
+        });
     }
 };
