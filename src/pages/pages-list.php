@@ -78,11 +78,9 @@
             <span style="font-size: 24px;">18 + ui (всего страниц в макете)</span>
         </span>
     </div>
-    <div style="font-size: 24px;">Готовые разделы отмечены "<span class="block-ready">Блок готов</span>"</div>
 
     <div>
         <ul>
-            <!--<li class="block-ready">Блок готов</li>-->
             <li><a href="index.php" target="_blank" class="ready">Главная</a></li>
             <br>
 

@@ -9,8 +9,8 @@
     <title>StereoWood - ui</title>
 
     <link rel="preload" href="fonts/Gilroy/Gilroy-Regular.ttf" as="font" type="font/ttf" crossorigin>
-    <link rel="preload" href="fonts/Gilroy/Manrope-Medium.ttf" as="font" type="font/ttf" crossorigin>
-    <link rel="preload" href="fonts/Gilroy/Manrope-Semibold.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="fonts/Gilroy/Gilroy-Medium.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="fonts/Gilroy/Gilroy-Semibold.ttf" as="font" type="font/ttf" crossorigin>
     <link rel="preload" href="fonts/Gilroy/Gilroy-Bold.ttf" as="font" type="font/ttf" crossorigin>
 
     <link rel="stylesheet" href="css/vendors.css" type="text/css">
