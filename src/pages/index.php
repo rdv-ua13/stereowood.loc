@@ -48,6 +48,28 @@
                         </div>
                     </div>
                 </div>
+                <div class="swiper-slide">
+                    <div class="container">
+                        <div class="catalog-preview">
+                            <div class="catalog-preview__descr">
+                                <div class="catalog-preview__title h1">Детские игровые комплексы и оборудование для благоустройства</div>
+                                <div class="catalog-preview__subtitle">Отдых на свежем воздухе становится приятнее и комфортнее. Создаем игровое оборудование, спортивные комплексы и уличную мебель из качественных и надежных материалов.</div>
+                            </div>
+                            <div class="catalog-preview__view slider-out" style="background-image: url('img/img-3.jpg');">
+                                <div class="catalog-preview__caption caption-panel">
+                                    <div class="caption-panel-descr">Оборудование серии “QUANTWOOD” - Впечатляет своим футуристическим дизайном и разнообразием геометрических форм.</div>
+                                    <div class="caption-panel-link">
+                                        <a href="javascript:;">
+                                            <svg class="icon">
+                                                <use href="img/sprite.svg#chevron-right-border"></use>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="swiper-pagination"></div>
         </div>

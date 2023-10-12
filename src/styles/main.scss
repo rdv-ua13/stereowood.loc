@@ -17,12 +17,12 @@
 	body {
 		&.index {
 			.main {
-				padding-top: 156px;
+				padding-top: 124px;
 			}
 		}
 		&:not(.index) {
 			.main {
-				padding-top: 168px;
+				padding-top: 132px;
 			}
 		}
 	}
@@ -31,13 +31,6 @@
 	body {
 		.main {
 			padding-top: 12px;
-		}
-	}
-}
-@media (min-width: 992px) and (max-width: 1199.98px) {
-	body {
-		.main {
-			padding-top: 124px;
 		}
 	}
 }
@@ -60,6 +53,7 @@
 	.index-slider-wrapper {
 		.swiper-pagination {
 			top: 0;
+			right: var(--container-offset);
 			bottom: 0;
 			left: unset;
 			flex-direction: column;
@@ -74,6 +68,22 @@
 					border-color: var(--white-color);
 					background-color: var(--white-color);
 				}
+				&-active {
+					position: relative;
+
+					&::before {
+						content: "";
+						z-index: -1;
+						position: absolute;
+						top: -2px;
+						right: -2px;
+						bottom: -2px;
+						left: -2px;
+						opacity: 0.5;
+						border-radius: 50%;
+						background-color: var(--white-color);
+					}
+				}
 			}
 		}
 	}
@@ -83,13 +93,13 @@
 		}
 	}
 }
-@media (min-width: 1312px) {
+/*@media (min-width: 1312px) {
 	.index-slider-wrapper {
 		.swiper-pagination {
 			right: calc((100vw - var(--content-width)) / 2);
 		}
 	}
-}
+}*/
 @media (max-width: 991.98px) {
 	.index-slider-wrapper {
 		.swiper-pagination {
@@ -108,13 +118,13 @@
 		overflow: visible;
 	}
 }
-@media (min-width: 992px) and (max-width: 1311.98px) {
+/*@media (min-width: 992px) and (max-width: 1311.98px) {
 	.index-slider-wrapper {
 		.swiper-pagination {
 			right: var(--container-offset);
 		}
 	}
-}
+}*/
 
 .caption-panel {
 	display: flex;
@@ -1422,12 +1432,6 @@
 					width: calc((100% - 32px) / 3);
 				}
 			}
-			/*&--cols-max {
-				.product-card-descr__item {
-					min-width: calc((100% - 80px) / 6);
-					width: calc((100% - 80px) / 6);
-				}
-			}*/
 		}
 		&-color {
 			&__view {
@@ -1483,12 +1487,6 @@
 					width: calc((100% - 16px) / 2);
 				}
 			}
-			/*&--cols-max {
-				.product-card-descr__item {
-					min-width: calc((100% - 64px) / 5);
-					width: calc((100% - 64px) / 5);
-				}
-			}*/
 		}
 		&-color {
 			&__view {
@@ -1556,29 +1554,5 @@
 		&-item {
 			position: relative;
 		}
-	}
-}
-@media (min-width: 992px) {
-	.accordion {
-	}
-}
-@media (max-width: 991.98px) {
-	.accordion {
-		/*&__item {
-			&:not(:last-child) {
-				padding-bottom: 16px;
-
-				&::before {
-					content: "";
-					position: absolute;
-					right: -16px;
-					bottom: 0;
-					left: -16px;
-					min-height: 1px;
-					height: 1px;
-					background-color: var(--gray5-color);
-				}
-			}
-		}*/
 	}
 }

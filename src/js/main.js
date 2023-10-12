@@ -850,24 +850,9 @@ application.prototype.initAccordion = function () {
 // Initialize cart quantity
 application.prototype.initCartQuantity = function () {
     if ($('.cart-quantity').length) {
-        /*$('.cart-buy .cart-in').on("click", function() {
-            if(!$(this).hasClass('active')) {
-                $(this).addClass('active');
-                $(this).closest('.cart-buy').find('.cart-quantity').removeClass('disabled');
-                $(this).closest('.cart-buy').find('.cart-quantity-btn--remove').addClass('selected');
-            } else {
-                $(this).removeClass('active');
-                $(this).closest('.cart-buy').find('.cart-quantity').addClass('disabled');
-                $(this).closest('.cart-buy').find('.cart-quantity-btn--remove').removeClass('selected');
-                $(this).closest('.cart-buy').find('input.cart-quantity-input').val(1);
-            }
-        });*/
-
         $(document).on('click','.cart-quantity-btn--remove', function() {
             if ($(this).hasClass('selected')) {
                 $(this).removeClass('selected');
-                $(this).closest('.cart-buy').find('.cart-in').removeClass('active');
-                $(this).closest('.cart-quantity').addClass('disabled');
             }
         });
 
