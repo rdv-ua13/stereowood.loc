@@ -573,7 +573,7 @@
                     <div class="field-wrapper">
                         <span class="custom-checkbox custom-checkbox--agree">
                             <input id="calcProjectFormAgree" class="custom-checkbox__input" type="checkbox" checked>
-                            <label for="calcProjectFormAgree" class="custom-checkbox__label-for">Я ознакомлен(а) с <a class="link" href="javascript:;">Политикой конфиденциальности</a> и даю согласие на обработку моих персональных данных.</label>
+                            <label for="calcProjectFormAgree" class="custom-checkbox__label-for">Я ознакомлен(а) с <a class="link link-tdu" href="javascript:;">Политикой конфиденциальности</a> и даю согласие на обработку моих персональных данных.</label>
                         </span>
                     </div>
                 </form>

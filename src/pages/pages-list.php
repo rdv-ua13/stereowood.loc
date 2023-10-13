@@ -94,6 +94,8 @@
             <li><a href="site-search.php" target="_blank" class="ready">Поиск по сайту</a></li>
             <li><a href="contacts.php" target="_blank" class="ready">Контакты</a></li>
             <li><a href="delivery.php" target="_blank" class="ready">Доставка</a></li>
+            <li><a href="cart.php" target="_blank" class="ready">Корзина</a></li>
+
             <br>
             <br>
 

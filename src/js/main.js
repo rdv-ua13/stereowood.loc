@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener('DOMContentLoaded', () => {
     const app = new application();
     app.init();
 });
@@ -16,7 +16,7 @@ application.prototype.init = function () {
     this.initDropdownMenuOffset();
     this.initHeaderContactsAs();
     this.initHeaderSearch();
-    /*this.initMaskedInput(); not works*/
+    this.initMaskedInput();
     this.initBasicSlider();
     this.initSliders();
     this.initSwitchContent();
@@ -34,6 +34,7 @@ application.prototype.init = function () {
     this.initContactsMap();
     this.initAccordion();
     this.initCartQuantity();
+    this.initSelect2();
 };
 
 // Initialize device check
@@ -120,7 +121,7 @@ application.prototype.initOverlay = function () {
 
         $(triggerEl).on('click', function () {
             body.addClass('overflow-hidden');
-            $("<div class='overlay'></div>").insertAfter($(this));
+            $('<div class="overlay"></div>').insertAfter($(this));
         });
 
         $(document).on('click', function (e) {
@@ -205,7 +206,7 @@ application.prototype.initDropdownMenuOffset = function () {
         $(window).on('resize', coordCalc);
 
         function coordCalc () {
-            if (window.matchMedia("(min-width: 992px)").matches) {
+            if (window.matchMedia('(min-width: 992px)').matches) {
                 dropdown.each(function () {
                     let coordX = $(this).offset().left;
                     let elemW = $(this).outerWidth();
@@ -295,7 +296,7 @@ application.prototype.initHeaderSearch = function () {
 
 // Mobile number mask
 application.prototype.initMaskedInput = function () {
-    $(".isPhone").mask("+7-999-999-99-99", { autoclear: false });
+    $('.isPhone').mask("+7-999-999-99-99", { autoclear: false });
 };
 
 // Initialize basic slider
@@ -327,13 +328,13 @@ application.prototype.initBasicSlider = function () {
             };
 
             reinitSlider();
-            $(window).on("resize", reinitSlider);
+            $(window).on('resize', reinitSlider);
 
             function reinitSlider() {
-                if (window.matchMedia("(min-width: 992px)").matches) {
+                if (window.matchMedia('(min-width: 992px)').matches) {
                     basicSlider = null;
                     basicSlider = new Swiper('.basic-slider-wrap-' + i + ' .basic-slider.basic-slider-desktop', basicSliderSetting);
-                } else if (window.matchMedia("(max-width: 991.98px)").matches) {
+                } else if (window.matchMedia('(max-width: 991.98px)').matches) {
                     basicSlider = null;
                     basicSlider = new Swiper('.basic-slider-wrap-' + i + ' .basic-slider.basic-slider-mobile', basicSliderSetting);
                 }
@@ -351,7 +352,7 @@ application.prototype.initSliders = function () {
             spaceBetween: 0,
             direction: 'horizontal',
             pagination: {
-                el: ".index-slider-wrapper .swiper-pagination",
+                el: '.index-slider-wrapper .swiper-pagination',
                 type: 'bullets'
             }
         });
@@ -420,7 +421,7 @@ application.prototype.initReadmore = function () {
             let defaultHeight = 340;
             let defaultMoreText = 'Показать все';
             let defaultLessText = 'Свернуть';
-            let currentElemHeight = spoiler.eq(i).data("collapsed-height");
+            let currentElemHeight = spoiler.eq(i).data('collapsed-height');
 
             if (currentMoreText === '' || currentMoreText === null || currentMoreText === undefined &&
                 currentLessText === '' || currentLessText === null || currentLessText === undefined)
@@ -441,8 +442,8 @@ application.prototype.initReadmore = function () {
                 $(this).addClass('spoiler-scrolled');
             }
 
-            spoiler.eq(i).addClass("spoiler-" + i);
-            $(".spoiler-" + i).readmore({
+            spoiler.eq(i).addClass('spoiler-' + i);
+            $('.spoiler-' + i).readmore({
                 collapsedHeight: currentElemHeight,
                 moreLink: '<a href="javascript:;" class="link-dashed link-red spoiler-trigger">\n' +
                     '                                        <span class="btn__text">' + currentMoreText + '</span>\n' +
@@ -698,17 +699,17 @@ application.prototype.initCatalogContentViewSwitcher = function () {
 
 // Initialize tooltips
 application.prototype.initTooltips = function () {
-    if ($(".tooltip").length) {
-        tippy(".tooltip", {
+    if ($('.tooltip').length) {
+        tippy('.tooltip', {
             allowHTML: true,
-            trigger: "mouseenter click",
+            trigger: 'mouseenter click',
         });
     }
 };
 
 // Initialize delete trigger
 application.prototype.initDeleteTrigger = function () {
-    $('[data-delete-trigger]').on("click", function () {
+    $('[data-delete-trigger]').on('click', function () {
         $(this).closest('[data-removable]').remove();
     });
 };
@@ -816,9 +817,9 @@ application.prototype.initContactsMap = function () {
 
 // Initialize accordion
 application.prototype.initAccordion = function () {
-    if ($(".accordion").length) {
+    if ($('.accordion').length) {
         initAccordionResponsive();
-        $(window).on("resize", initAccordionResponsive, reloadAccordionResponsive);
+        $(window).on('resize', initAccordionResponsive, reloadAccordionResponsive);
 
         function reloadAccordionResponsive() {
             setTimeout(function () {
@@ -826,20 +827,20 @@ application.prototype.initAccordion = function () {
             }, 300);
         }
         function initAccordionResponsive() {
-            $(".accordion__collapse").hide();
+            $('.accordion__collapse').hide();
 
-            $(".js-accordion-btn").on("click", function () {
-                if (!$(this).hasClass("open")) {
-                    $(this).addClass("open");
-                    $(this).closest(".accordion__item").addClass("active");
-                    $(this).closest(".accordion__item").find(".accordion__collapse").removeClass("collapsed");
-                    $(this).closest(".accordion__item").find(".accordion__collapse").slideDown(160);
-                } else if ($(this).hasClass("open")) {
-                    $(this).removeClass("open");
-                    $(this).closest(".accordion__item").removeClass("active");
-                    $(this).closest(".accordion__item").find(".accordion__collapse").slideUp(160);
+            $('.js-accordion-btn').on('click', function () {
+                if (!$(this).hasClass('open')) {
+                    $(this).addClass('open');
+                    $(this).closest('.accordion__item').addClass('active');
+                    $(this).closest('.accordion__item').find('.accordion__collapse').removeClass('collapsed');
+                    $(this).closest('.accordion__item').find('.accordion__collapse').slideDown(160);
+                } else if ($(this).hasClass('open')) {
+                    $(this).removeClass('open');
+                    $(this).closest('.accordion__item').removeClass('active');
+                    $(this).closest('.accordion__item').find('.accordion__collapse').slideUp(160);
                     setTimeout(function () {
-                        $(this).closest(".accordion__item").find(".accordion__collapse").addClass("collapsed");
+                        $(this).closest('.accordion__item').find('.accordion__collapse').addClass('collapsed');
                     }, 160);
                 }
             });
@@ -893,5 +894,18 @@ application.prototype.initCartQuantity = function () {
 
             button.closest('.cart-quantity').find('input.cart-quantity-input').val(newVal).trigger('change');
         });
+    }
+};
+
+// Initialize select2
+application.prototype.initSelect2 = function () {
+    if ($('.js-select2').length) {
+        $('.js-select2').select2(
+            {
+                width: "100%",
+                minimumResultsForSearch: -1,
+                escapeMarkup: function(m) { return m; }
+            }
+        );
     }
 };

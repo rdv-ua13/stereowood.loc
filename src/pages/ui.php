@@ -20,6 +20,7 @@
     <script defer src="js/jquery.js"></script>    <!-- jquery -->
     <script defer src="js/jquery.validate.js"></script>    <!-- validate -->
     <script defer src="js/messages_ru.js"></script>    <!-- validate -->
+    <script defer src="js/jquery.maskedinput.js"></script>    <!-- maskedinput -->
     <script defer src="js/popper.js"></script>    <!-- popper -->
     <script defer src="js/swiper-bundle.js"></script>    <!-- swiper -->
     <script defer src="js/tippy-bundle.umd.js"></script>    <!-- tippy -->
@@ -132,27 +133,27 @@
                 <h3>Colors</h3>
                 <div class="ui-container">
                     <div>
-                        <div class="flex-v-center">
+                        <div class="flex-start-center">
                             <span class="color-block" style="background-color: var(--black-color);"></span>&nbsp;&#8212; var(--black-color)
                         </div>
-                        <div class="flex-v-center">
+                        <div class="flex-start-center">
                             <span class="color-block" style="background-color: var(--white-color);"></span>&nbsp;&#8212; var(--white-color)
                         </div>
-                        <div class="flex-v-center">
+                        <div class="flex-start-center">
                             <span class="color-block" style="background-color: var(--green-color);"></span>&nbsp;&#8212; var(--green-color)
                         </div>
-                        <div class="flex-v-center">
+                        <div class="flex-start-center">
                             <span class="color-block" style="background-color: var(--error-color);"></span>&nbsp;&#8212; var(--error-color)
                         </div>
                     </div>
                     <div>
-                        <div class="flex-v-center">
+                        <div class="flex-start-center">
                             <span class="color-block" style="background-color: var(--text-secondary-color);"></span>&nbsp;&#8212; var(--text-secondary-color)
                         </div>
-                        <div class="flex-v-center">
+                        <div class="flex-start-center">
                             <span class="color-block" style="background-color: var(--surface-darkgreen-color);"></span>&nbsp;&#8212; var(--surface-darkgreen-color)
                         </div>
-                        <div class="flex-v-center">
+                        <div class="flex-start-center">
                             <span class="color-block" style="background-color: var(--surface-lightgray-color);"></span>&nbsp;&#8212; var(--surface-lightgray-color)
                         </div>
                     </div>
@@ -163,12 +164,12 @@
                 <h3>Shadow</h3>
                 <div class="ui-container">
                     <div>
-                        <div class="flex-v-center out-container">
+                        <div class="flex-start-center out-container">
                             <span class="color-block" style="box-shadow: var(--shadow);"></span>&nbsp;&#8212; var(--shadow)
                         </div>
                     </div>
                     <div>
-                        <div class="flex-v-center out-container">
+                        <div class="flex-start-center out-container">
                             <span class="color-block" style="box-shadow: var(--shadow-2);"></span>&nbsp;&#8212; var(--shadow-2)
                         </div>
                     </div>
@@ -579,7 +580,7 @@
             <div class="ui-container">
                 <div class="ui-col">
                     <div class="ui-row ">
-                        <div class="flex-v-center" style="width: 100%;">
+                        <div class="flex-start-center" style="width: 100%;">
                             tooltip -&nbsp;
                             <!--start ui content-->
                             <span class="tooltip"

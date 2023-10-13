@@ -31,6 +31,7 @@
     <script defer src="js/jquery.js"></script>    <!-- jquery -->
     <script defer src="js/jquery.validate.js"></script>    <!-- validate -->
     <script defer src="js/messages_ru.js"></script>    <!-- validate -->
+    <script defer src="js/jquery.maskedinput.js"></script>    <!-- maskedinput -->
     <script defer src="js/popper.js"></script>    <!-- popper -->
     <script defer src="js/swiper-bundle.js"></script>    <!-- swiper -->
     <script defer src="js/tippy-bundle.umd.js"></script>    <!-- tippy -->
@@ -82,8 +83,8 @@
                                     loading="lazy"
                                     class="image"
                                     src="img/whatsapp.svg"
-                                    width="32"
-                                    height="32"
+                                    width="24"
+                                    height="24"
                                     alt="whatsapp"
                             >
                         </a>
@@ -339,6 +340,9 @@
                                     <use href="img/sprite.svg#cart"></use>
                                 </svg>
                             </a>
+                            <div class="header-cart__amount">
+                                <span>7</span>
+                            </div>
                         </li>
                     </ul>
                 </div>

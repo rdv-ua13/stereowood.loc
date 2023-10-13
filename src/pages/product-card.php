@@ -239,13 +239,21 @@
                         </div>
                         <div class="product-card-descr__item">
                             <div class="cart-quantity">
-                                <button class="btn-reset cart-quantity-btn cart-quantity-btn--remove" data-value="qty-remove">
+                                <button class="btn-reset cart-quantity-btn cart-quantity-btn--remove" type="button" data-value="qty-remove">
                                     <svg class="icon icon-md btn__icon">
                                         <use href="img/sprite.svg#minus"></use>
                                     </svg>
                                 </button>
-                                <input id="" class="input-reset cart-quantity-input" type="text" placeholder="999" value="1" max="999" data-mult="1">
-                                <button class="btn-reset cart-quantity-btn cart-quantity-btn--add" data-value="qty-add">
+                                <input
+                                        id=""
+                                        class="input-reset cart-quantity-input"
+                                        type="text"
+                                        placeholder="999"
+                                        value="1"
+                                        max="999"
+                                        data-mult="1"
+                                >
+                                <button class="btn-reset cart-quantity-btn cart-quantity-btn--add" type="button" data-value="qty-add">
                                     <svg class="icon icon-md btn__icon">
                                         <use href="img/sprite.svg#plus"></use>
                                     </svg>
