@@ -186,7 +186,7 @@
 	</div>
 </div>
 
-<div class="gap-md">
+<div class="gap-xl">
     <div class="container">
         <div class="gap-sm">
             <div class="h3">Оформление заказа</div>
