@@ -19,7 +19,7 @@
 
 <div class="gap-md">
 	<div class="container">
-		<div class="block block-sm block-top block-border-top">
+		<div class="block-border-top">
 			<div class="cart-content">
                 <div class="cart-content__item cart-card" data-removable>
                     <span class="cart-card__view">
@@ -67,7 +67,7 @@
                     <span class="cart-card__total">
                         <span class="h3">9 526 200 ₽</span>
                     </span>
-                    <span class="cart-card__delete" data-delete-trigger>
+                    <span class="cart-card__delete" title="Удалить товар" data-delete-trigger>
                         <svg class="icon icon-md">
                             <use href="img/sprite.svg#cross"></use>
                         </svg>
@@ -119,7 +119,7 @@
                     <span class="cart-card__total">
                         <span class="h3">526 200 ₽</span>
                     </span>
-                    <span class="cart-card__delete" data-delete-trigger>
+                    <span class="cart-card__delete" title="Удалить товар" data-delete-trigger>
                         <svg class="icon icon-md">
                             <use href="img/sprite.svg#cross"></use>
                         </svg>
@@ -171,7 +171,7 @@
                     <span class="cart-card__total">
                         <span class="h3">9 526 200 ₽</span>
                     </span>
-                    <span class="cart-card__delete" data-delete-trigger>
+                    <span class="cart-card__delete" title="Удалить товар" data-delete-trigger>
                         <svg class="icon icon-md">
                             <use href="img/sprite.svg#cross"></use>
                         </svg>
@@ -300,7 +300,8 @@
                         </div>
                         <div class="cart-order__row-item-big field-wrapper">
                             <button class="btn-reset btn btn-primary w-100" type="button">
-                                <span class="btn__text">Запросить коммерческое предложение для юридических лиц</span>
+                                <span class="btn__text d-none d-sm-inline-block">Запросить коммерческое предложение для юридических лиц</span>
+                                <span class="btn__text d-sm-none">Коммерческое предложение для юр. лиц</span>
                             </button>
                         </div>
                     </div>
