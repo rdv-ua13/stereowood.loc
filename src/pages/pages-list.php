@@ -95,6 +95,9 @@
             <li><a href="contacts.php" target="_blank" class="ready">Контакты</a></li>
             <li><a href="delivery.php" target="_blank" class="ready">Доставка</a></li>
             <li><a href="cart.php" target="_blank" class="ready">Корзина</a></li>
+            <br>
+
+            <li><a href="auth.php" target="_blank" class="ready">Авторизация</a></li>
 
             <br>
             <br>
