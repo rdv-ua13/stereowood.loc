@@ -432,7 +432,7 @@
             <div class="ui-container">
                 <div class="ui-col" style="max-width: 290px">
                     <!--start ui content-->
-                    <div class="titled-input titled-input-label">
+                    <div class="titled-input">
                         <div class="input-title">Label</div>
                         <div class="input-wrapper">
                             <input

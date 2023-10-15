@@ -916,9 +916,9 @@ application.prototype.initPasswordSwitcher = function () {
     if ($('input[type=password]').length) {
         $(document).on('click', 'input[data-password-switcher]', function(){
             if ($(this).is(':checked')) {
-                $(this).closest('.form__field').find('input[data-password-target]').attr('type', 'text');
+                $(this).closest('.input-icon-btn').find('input[data-password-target]').attr('type', 'text');
             } else {
-                $(this).closest('.form__field').find('input[data-password-target]').attr('type', 'password');
+                $(this).closest('.input-icon-btn').find('input[data-password-target]').attr('type', 'password');
             }
         });
     }

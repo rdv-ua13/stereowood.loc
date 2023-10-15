@@ -1009,6 +1009,18 @@ input.disabled {
 		padding-left: 15px;
 		font-size: 14px;
 	}
+	&-icon {
+		&-btn {
+			z-index: 1;
+			position: absolute;
+			top: 0;
+			right: 0;
+			min-width: 48px;
+			width: 48px;
+			min-height: 48px;
+			height: 48px;
+		}
+	}
 
 	&-select2 {
 		& + .select2.select2-container {

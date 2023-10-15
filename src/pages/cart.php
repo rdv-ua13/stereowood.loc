@@ -200,7 +200,7 @@
                 <div class="gap-sm cart-order__fields">
                     <div class="cart-order__row">
                         <div class="cart-order__row-item field-wrapper">
-                            <div class="titled-input titled-input-label">
+                            <div class="titled-input">
                                 <div class="input-title">Ф.И.О.</div>
                                 <div class="input-wrapper">
                                     <input
@@ -216,7 +216,7 @@
                             </div>
                         </div>
                         <div class="cart-order__row-item field-wrapper">
-                            <div class="titled-input titled-input-label">
+                            <div class="titled-input">
                                 <div class="input-title">Телефон</div>
                                 <div class="input-wrapper">
                                     <input
@@ -231,7 +231,7 @@
                             </div>
                         </div>
                         <div class="cart-order__row-item field-wrapper">
-                            <div class="titled-input titled-input-label">
+                            <div class="titled-input">
                                 <div class="input-title">E-mail</div>
                                 <div class="input-wrapper">
                                     <input
@@ -250,7 +250,7 @@
 
                     <div class="cart-order__row">
                         <div class="cart-order__row-item field-wrapper">
-                            <div class="titled-input titled-input-label">
+                            <div class="titled-input">
                                 <div class="input-title">Способ доставки</div>
                                 <div class="input-wrapper">
                                     <select
@@ -266,7 +266,7 @@
                             </div>
                         </div>
                         <div class="cart-order__row-item-big field-wrapper">
-                            <div class="titled-input titled-input-label">
+                            <div class="titled-input">
                                 <div class="input-title">Адрес доставки</div>
                                 <div class="input-wrapper">
                                     <input

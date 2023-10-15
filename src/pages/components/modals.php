@@ -24,7 +24,7 @@
                     </svg>
                 </div>
                 <div class="gap-md field-wrapper">
-                    <div class="titled-input titled-input-label">
+                    <div class="titled-input">
                         <div class="input-title">Ваше имя</div>
                         <div class="input-wrapper">
                             <input
@@ -40,7 +40,7 @@
                     </div>
                 </div>
                 <div class="gap-md field-wrapper">
-                    <div class="titled-input titled-input-label">
+                    <div class="titled-input">
                         <div class="input-title">Номер телефона или электронная почта</div>
                         <div class="input-wrapper">
                             <input
@@ -98,7 +98,7 @@
                     </svg>
                 </div>
                 <div class="gap-md field-wrapper">
-                    <div class="titled-input titled-input-label">
+                    <div class="titled-input">
                         <div class="input-title">Ваше имя</div>
                         <div class="input-wrapper">
                             <input
@@ -114,7 +114,7 @@
                     </div>
                 </div>
                 <div class="gap-md field-wrapper">
-                    <div class="titled-input titled-input-label">
+                    <div class="titled-input">
                         <div class="input-title">Номер телефона или электронная почта</div>
                         <div class="input-wrapper">
                             <input
