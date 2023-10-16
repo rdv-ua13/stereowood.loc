@@ -28,7 +28,7 @@
                         </a>
                     </div>
                     <div class="swiper-slide">
-                        <a href="javascript:;" class="btn-reset btn btn-primary">
+                        <a href="javascript:;" class="btn-reset btn btn-primary active">
                             <span class="btn__text">Корзина</span>
                         </a>
                     </div>
@@ -125,16 +125,16 @@
 						alt="Изображение блока"
 					>
 				</span>
-					<span class="cart-card__descr">
+                <span class="cart-card__descr">
 					<span class="cart-card__descr-title">Комплект садовой мебели «Краун»</span>
 					<span class="cart-card__descr-caption">
 						<span>Версия:</span> <span class="value">12100х2900х3800 мм</span>
 					</span>
 				</span>
-					<span class="cart-card__price">
+                <span class="cart-card__price">
 					<span class="h3">175 400 ₽</span>
 				</span>
-					<span class="cart-card__quantity">
+                <span class="cart-card__quantity">
 					<span class="cart-quantity">
 						<button class="btn-reset cart-quantity-btn cart-quantity-btn--remove" type="button" data-value="qty-remove">
 							<svg class="icon icon-md btn__icon">
@@ -157,10 +157,10 @@
 						</button>
 					</span>
 				</span>
-					<span class="cart-card__total">
+                <span class="cart-card__total">
 					<span class="h3">526 200 ₽</span>
 				</span>
-					<span class="cart-card__delete" title="Удалить товар" data-delete-trigger>
+                <span class="cart-card__delete" title="Удалить товар" data-delete-trigger>
 					<svg class="icon icon-md">
 						<use href="img/sprite.svg#cross"></use>
 					</svg>

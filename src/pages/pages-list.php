@@ -101,7 +101,11 @@
             <li><a href="reg.php" target="_blank" class="ready">Регистрация нового пользователя</a></li>
             <br>
 
+            <li><a href="lk-profile.php" target="_blank" class="ready">ЛК - Профиль пользователя</a></li>
+            <li><a href="lk-history.php" target="_blank" class="ready">ЛК - История заказов</a></li>
             <li><a href="lk-cart.php" target="_blank" class="ready">ЛК - Моя корзина</a></li>
+            <li><a href="lk-offers.php" target="_blank" class="ready">ЛК - Коммерческие предложения</a></li>
+            <li><a href="lk-archive.php" target="_blank" class="ready">ЛК - Архив коммерческих предложений</a></li>
 
             <br>
             <br>
