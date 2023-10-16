@@ -914,11 +914,13 @@ application.prototype.initSelect2 = function () {
 // Initialization password-switcher
 application.prototype.initPasswordSwitcher = function () {
     if ($('input[type=password]').length) {
-        $(document).on('click', 'input[data-password-switcher]', function(){
+        $(document).on('click', 'input[data-password-switcher]', function() {
             if ($(this).is(':checked')) {
-                $(this).closest('.input-icon-btn').find('input[data-password-target]').attr('type', 'text');
+                $(this).closest('.input-wrapper').find('input[data-password-target]').attr('type', 'text');
+                $(this).closest('.input-wrapper').find('.input-icon').addClass('active');
             } else {
-                $(this).closest('.input-icon-btn').find('input[data-password-target]').attr('type', 'password');
+                $(this).closest('.input-wrapper').find('input[data-password-target]').attr('type', 'password');
+                $(this).closest('.input-wrapper').find('.input-icon').removeClass('active');
             }
         });
     }

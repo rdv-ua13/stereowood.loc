@@ -98,6 +98,7 @@
             <br>
 
             <li><a href="auth.php" target="_blank" class="ready">Авторизация</a></li>
+            <li><a href="reg.php" target="_blank" class="ready">Регистрация нового пользователя</a></li>
 
             <br>
             <br>

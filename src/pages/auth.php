@@ -14,10 +14,9 @@
 
 <div class="gap-xl">
 	<div class="container">
-
-        <div class="authreg">
-            <div class="gap-xl">
-                <form id="" class="form authreg-form" method="" action="javascript:;">
+        <form id="" class="authreg" method="" action="javascript:;">
+            <div class="gap-md">
+                <div class="gap-sm">
                     <div class="titled-input">
                         <div class="input-title">Логин</div>
                         <div class="input-wrapper">
@@ -32,19 +31,21 @@
                             >
                         </div>
                     </div>
-                    <div class="titled-input has-icon has-icon-r">
+                </div>
+                <div class="">
+                    <div class="titled-input">
                         <div class="input-title">Пароль</div>
-                        <div class="input-wrapper">
+                        <div class="input-wrapper has-icon-r">
                             <input
                                     class="input-reset input"
                                     type="password"
                                     name=""
                                     value=""
                                     placeholder=""
-                                    autocomplete="off"
+                                    data-password-target
                                     required
                             >
-                            <div class="input-icon input-icon-btn">
+                            <label class="input-icon input-icon-btn">
                                 <svg class="icon icon-md icon-default">
                                     <use href="img/sprite.svg#eye"></use>
                                 </svg>
@@ -56,49 +57,33 @@
                                         class="visually-hidden"
                                         data-password-switcher
                                 >
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="form__field">
-                        <label for="authFormPassword" class="form__label-for">
-                            <span>Пароль <span class="required-star">*</span></span>
-                        </label>
-                        <input
-                                id="authFormPassword"
-                                class="input-reset form__input"
-                                type="password"
-                                name="authFormPassword"
-                                placeholder=""
-                                data-password-target
-                                required
-                        >
-                        <div class="form__btn">
-                            <label class="flex-all-center">
-                                <svg class="icon">
-                                    <use href="img/sprite.svg#eye-on"></use>
-                                </svg>
-                                <input
-                                        type="checkbox"
-                                        class="visually-hidden"
-                                        data-password-switcher
-                                >
                             </label>
                         </div>
                     </div>
-                    <div class="form__field form__field-btn">
-                        <button class="btn-reset btn btn--fill">
+                </div>
+            </div>
+
+            <div class="gap-xl">
+                <div class="gap-md">
+                    <div class="input-wrapper">
+                        <button class="btn-reset btn btn-secondary w-100" type="submit">
                             <span class="btn__text">Войти</span>
                         </button>
-                        <a href="javascript:;" class="link link--green">Восстановить пароль</a>
                     </div>
-                </form>
+                </div>
+                <div class="">
+                    <div class="input-wrapper">
+                        <a href="javascript:;" class="btn-reset btn btn-primary w-100">Зарегестрироваться</a>
+                    </div>
+                </div>
             </div>
-            <div class="">
-                <a href="javascript:;" class="link link-tdu">Забыли свой пароль?</a>
-            </div>
-        </div>
 
+            <div class="">
+                <div class="flex-center-center">
+                    <a href="javascript:;" class="link link-tdu">Забыли свой пароль?</a>
+                </div>
+            </div>
+        </form>
 	</div>
 </div>
 
