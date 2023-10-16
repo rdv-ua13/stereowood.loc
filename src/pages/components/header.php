@@ -90,7 +90,7 @@
                         </a>
                     </div>
                     <div class="header-contacts__list-container">
-                        <button class="btn-reset btn header-contacts__list-spoiler">
+                        <button class="btn-reset btn btn-xs header-contacts__list-spoiler">
                             <svg class="icon btn__icon">
                                 <use href="img/sprite.svg#call"></use>
                             </svg>
