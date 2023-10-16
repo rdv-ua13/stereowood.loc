@@ -10,7 +10,7 @@
     <div class="container">
         <div class="flex-start-end">
             <div class="h3 grow-1">Ваша корзина</div>
-            <button class="btn-reset btn btn-primary">
+            <button class="btn-reset btn btn-sm btn-primary">
                 <span class="btn__text">Очистить корзину</span>
             </button>
         </div>

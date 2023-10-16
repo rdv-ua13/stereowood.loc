@@ -263,12 +263,12 @@
                     </div>
                     <div class="product-card-descr product-card-descr-cart">
                         <div class="product-card-descr__item">
-                            <button class="btn-reset btn btn-secondary">
+                            <button class="btn-reset btn btn-sm btn-secondary">
                                 <span class="btn__text">Добавить к заказу</span>
                             </button>
                         </div>
                         <div class="product-card-descr__item">
-                            <button class="btn-reset btn btn-primary">
+                            <button class="btn-reset btn btn-sm btn-primary">
                                 <span class="btn__text">Купить в 1 клик</span>
                             </button>
                         </div>
@@ -281,22 +281,22 @@
                         </div>
                         <div class="product-card-descr product-card-descr--cols-min">
                             <div class="product-card-descr__item">
-                                <button class="btn-reset btn btn-secondary">
+                                <button class="btn-reset btn btn-sm btn-secondary">
                                     <span class="btn__text">400 х 6000 х 3300 мм</span>
                                 </button>
                             </div>
                             <div class="product-card-descr__item">
-                                <button class="btn-reset btn btn-primary">
+                                <button class="btn-reset btn btn-sm btn-primary">
                                     <span class="btn__text">10000 х 8000 х 3300 мм</span>
                                 </button>
                             </div>
                             <div class="product-card-descr__item">
-                                <button class="btn-reset btn btn-primary">
+                                <button class="btn-reset btn btn-sm btn-primary">
                                     <span class="btn__text">21000 х 6000 х 3300 мм</span>
                                 </button>
                             </div>
                             <div class="product-card-descr__item">
-                                <button class="btn-reset btn btn-primary">
+                                <button class="btn-reset btn btn-sm btn-primary">
                                     <span class="btn__text">110 х 6000 х 3300 мм</span>
                                 </button>
                             </div>
@@ -578,7 +578,7 @@
                                         </div>
                                         <div class="card__price">3 175 400 ₽</div>
                                         <div class="card__to-cart">
-                                            <button class="btn-reset btn btn-secondary">
+                                            <button class="btn-reset btn btn-sm btn-secondary">
                                                 <span class="btn__text">Добавить в корзину</span>
                                             </button>
                                         </div>
@@ -627,7 +627,7 @@
                                         </div>
                                         <div class="card__price">3 175 400 ₽</div>
                                         <div class="card__to-cart">
-                                            <button class="btn-reset btn btn-secondary">
+                                            <button class="btn-reset btn btn-sm btn-secondary">
                                                 <span class="btn__text">Добавить в корзину</span>
                                             </button>
                                         </div>
@@ -676,7 +676,7 @@
                                         </div>
                                         <div class="card__price">3 175 400 ₽</div>
                                         <div class="card__to-cart">
-                                            <button class="btn-reset btn btn-secondary">
+                                            <button class="btn-reset btn btn-sm btn-secondary">
                                                 <span class="btn__text">Добавить в корзину</span>
                                             </button>
                                         </div>
@@ -725,7 +725,7 @@
                                         </div>
                                         <div class="card__price">3 175 400 ₽</div>
                                         <div class="card__to-cart">
-                                            <button class="btn-reset btn btn-secondary">
+                                            <button class="btn-reset btn btn-sm btn-secondary">
                                                 <span class="btn__text">Добавить в корзину</span>
                                             </button>
                                         </div>
@@ -774,7 +774,7 @@
                                         </div>
                                         <div class="card__price">3 175 400 ₽</div>
                                         <div class="card__to-cart">
-                                            <button class="btn-reset btn btn-secondary">
+                                            <button class="btn-reset btn btn-sm btn-secondary">
                                                 <span class="btn__text">Добавить в корзину</span>
                                             </button>
                                         </div>

@@ -99,6 +99,9 @@
 
             <li><a href="auth.php" target="_blank" class="ready">Авторизация</a></li>
             <li><a href="reg.php" target="_blank" class="ready">Регистрация нового пользователя</a></li>
+            <br>
+
+            <li><a href="lk-cart.php" target="_blank" class="ready">ЛК - Моя корзина</a></li>
 
             <br>
             <br>

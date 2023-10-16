@@ -58,7 +58,7 @@
                         </div>
                         <div class="card__price">3 175 400 ₽</div>
                         <div class="card__to-cart">
-                            <button class="btn-reset btn btn-secondary">
+                            <button class="btn-reset btn btn-sm btn-secondary">
                                 <span class="btn__text">Добавить в корзину</span>
                             </button>
                         </div>
@@ -105,7 +105,7 @@
                         </div>
                         <div class="card__price">3 175 400 ₽</div>
                         <div class="card__to-cart">
-                            <button class="btn-reset btn btn-secondary">
+                            <button class="btn-reset btn btn-sm btn-secondary">
                                 <span class="btn__text">Добавить в корзину</span>
                             </button>
                         </div>
@@ -152,7 +152,7 @@
                         </div>
                         <div class="card__price">3 175 400 ₽</div>
                         <div class="card__to-cart">
-                            <button class="btn-reset btn btn-secondary">
+                            <button class="btn-reset btn btn-sm btn-secondary">
                                 <span class="btn__text">Добавить в корзину</span>
                             </button>
                         </div>
@@ -199,7 +199,7 @@
                         </div>
                         <div class="card__price">3 175 400 ₽</div>
                         <div class="card__to-cart">
-                            <button class="btn-reset btn btn-secondary">
+                            <button class="btn-reset btn btn-sm btn-secondary">
                                 <span class="btn__text">Добавить в корзину</span>
                             </button>
                         </div>
@@ -246,7 +246,7 @@
                         </div>
                         <div class="card__price">3 175 400 ₽</div>
                         <div class="card__to-cart">
-                            <button class="btn-reset btn btn-secondary">
+                            <button class="btn-reset btn btn-sm btn-secondary">
                                 <span class="btn__text">Добавить в корзину</span>
                             </button>
                         </div>

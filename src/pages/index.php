@@ -95,31 +95,31 @@
                     </div>
                     <div class="index-popular__descr-row">
                         <div class="index-popular__btn-g">
-                            <button class="btn-reset btn btn-primary">
+                            <button class="btn-reset btn btn-sm btn-primary">
                                 <span class="btn__text">Игровые комплексы</span>
                             </button>
-                            <button class="btn-reset btn btn-primary">
+                            <button class="btn-reset btn btn-sm btn-primary">
                                 <span class="btn__text">Пространственные сетки</span>
                             </button>
-                            <button class="btn-reset btn btn-primary">
+                            <button class="btn-reset btn btn-sm btn-primary">
                                 <span class="btn__text">Детские домики</span>
                             </button>
-                            <button class="btn-reset btn btn-primary">
+                            <button class="btn-reset btn btn-sm btn-primary">
                                 <span class="btn__text">Качели</span>
                             </button>
-                            <button class="btn-reset btn btn-primary">
+                            <button class="btn-reset btn btn-sm btn-primary">
                                 <span class="btn__text">Горки</span>
                             </button>
-                            <button class="btn-reset btn btn-primary">
+                            <button class="btn-reset btn btn-sm btn-primary">
                                 <span class="btn__text">Встраиваемые батуты</span>
                             </button>
-                            <button class="btn-reset btn btn-primary">
+                            <button class="btn-reset btn btn-sm btn-primary">
                                 <span class="btn__text">Игровые элементы</span>
                             </button>
-                            <button class="btn-reset btn btn-primary">
+                            <button class="btn-reset btn btn-sm btn-primary">
                                 <span class="btn__text">Песочницы</span>
                             </button>
-                            <button class="btn-reset btn btn-primary">
+                            <button class="btn-reset btn btn-sm btn-primary">
                                 <span class="btn__text">Канатные конструкции</span>
                             </button>
                         </div>
@@ -142,19 +142,19 @@
                     </div>
                     <div class="index-popular__descr-row">
                         <div class="index-popular__btn-g">
-                            <button class="btn-reset btn btn-primary">
+                            <button class="btn-reset btn btn-sm btn-primary">
                                 <span class="btn__text">Оборудование для воркаута</span>
                             </button>
-                            <button class="btn-reset btn btn-primary">
+                            <button class="btn-reset btn btn-sm btn-primary">
                                 <span class="btn__text">Уличные тренажеры</span>
                             </button>
-                            <button class="btn-reset btn btn-primary">
+                            <button class="btn-reset btn btn-sm btn-primary">
                                 <span class="btn__text">Теннисные столы</span>
                             </button>
-                            <button class="btn-reset btn btn-primary">
+                            <button class="btn-reset btn btn-sm btn-primary">
                                 <span class="btn__text">Футбольные ворота</span>
                             </button>
-                            <button class="btn-reset btn btn-primary">
+                            <button class="btn-reset btn btn-sm btn-primary">
                                 <span class="btn__text">Трибуны</span>
                             </button>
                         </div>
@@ -177,25 +177,25 @@
                     </div>
                     <div class="index-popular__descr-row">
                         <div class="index-popular__btn-g">
-                            <button class="btn-reset btn btn-primary">
+                            <button class="btn-reset btn btn-sm btn-primary">
                                 <span class="btn__text">Парковые качели</span>
                             </button>
-                            <button class="btn-reset btn btn-primary">
+                            <button class="btn-reset btn btn-sm btn-primary">
                                 <span class="btn__text">Урны</span>
                             </button>
-                            <button class="btn-reset btn btn-primary">
+                            <button class="btn-reset btn btn-sm btn-primary">
                                 <span class="btn__text">Лежаки и шезлонги</span>
                             </button>
-                            <button class="btn-reset btn btn-primary">
+                            <button class="btn-reset btn btn-sm btn-primary">
                                 <span class="btn__text">Скамейки</span>
                             </button>
-                            <button class="btn-reset btn btn-primary">
+                            <button class="btn-reset btn btn-sm btn-primary">
                                 <span class="btn__text">Навесы и перголы</span>
                             </button>
-                            <button class="btn-reset btn btn-primary">
+                            <button class="btn-reset btn btn-sm btn-primary">
                                 <span class="btn__text">Контейнерные площадки</span>
                             </button>
-                            <button class="btn-reset btn btn-primary">
+                            <button class="btn-reset btn btn-sm btn-primary">
                                 <span class="btn__text">Беседки</span>
                             </button>
                         </div>
@@ -259,7 +259,7 @@
                                     </div>
                                     <div class="card__price">3 175 400 ₽</div>
                                     <div class="card__to-cart">
-                                        <button class="btn-reset btn btn-secondary">
+                                        <button class="btn-reset btn btn-sm btn-secondary">
                                             <span class="btn__text">Добавить в корзину</span>
                                         </button>
                                     </div>
@@ -308,7 +308,7 @@
                                     </div>
                                     <div class="card__price">3 175 400 ₽</div>
                                     <div class="card__to-cart">
-                                        <button class="btn-reset btn btn-secondary">
+                                        <button class="btn-reset btn btn-sm btn-secondary">
                                             <span class="btn__text">Добавить в корзину</span>
                                         </button>
                                     </div>
@@ -357,7 +357,7 @@
                                     </div>
                                     <div class="card__price">3 175 400 ₽</div>
                                     <div class="card__to-cart">
-                                        <button class="btn-reset btn btn-secondary">
+                                        <button class="btn-reset btn btn-sm btn-secondary">
                                             <span class="btn__text">Добавить в корзину</span>
                                         </button>
                                     </div>
@@ -406,7 +406,7 @@
                                     </div>
                                     <div class="card__price">3 175 400 ₽</div>
                                     <div class="card__to-cart">
-                                        <button class="btn-reset btn btn-secondary">
+                                        <button class="btn-reset btn btn-sm btn-secondary">
                                             <span class="btn__text">Добавить в корзину</span>
                                         </button>
                                     </div>
@@ -455,7 +455,7 @@
                                     </div>
                                     <div class="card__price">3 175 400 ₽</div>
                                     <div class="card__to-cart">
-                                        <button class="btn-reset btn btn-secondary">
+                                        <button class="btn-reset btn btn-sm btn-secondary">
                                             <span class="btn__text">Добавить в корзину</span>
                                         </button>
                                     </div>
