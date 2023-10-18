@@ -15,15 +15,8 @@
 }
 @media (min-width: 992px) {
 	body {
-		&.index {
-			.main {
-				padding-top: 146px;
-			}
-		}
-		&:not(.index) {
-			.main {
-				padding-top: 154px;
-			}
+		.main {
+			padding-top: 8px;
 		}
 	}
 }
