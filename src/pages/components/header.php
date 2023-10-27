@@ -327,7 +327,7 @@
                                 </div>
                             </form>
                         </li>
-                        <li class="header-actions__item header-profile not-logged">
+                        <li class="header-actions__item header-profile not-logged" data-fancybox="" data-src="#modal_test">
                             <a href="javascript:;" class="link">
                                 <svg class="icon">
                                     <use href="img/sprite.svg#user"></use>
