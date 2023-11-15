@@ -551,22 +551,40 @@
                             <div class="swiper-pagination"></div>
                         </div>
                     </div>
-                    <div class="catalog-content-tag">
-                        <button class="btn-reset btn btn-primary">
-                            <span class="btn__text">Комплексы с горкой</span>
-                        </button>
-                        <button class="btn-reset btn btn-primary">
-                            <span class="btn__text">Уличные игровые комплексы</span>
-                        </button>
-                        <button class="btn-reset btn btn-primary">
-                            <span class="btn__text">Антивандальные комплексы</span>
-                        </button>
-                        <button class="btn-reset btn btn-primary">
-                            <span class="btn__text">Горки детские</span>
-                        </button>
-                        <button class="btn-reset btn btn-primary">
-                            <span class="btn__text">Канатные дороги</span>
-                        </button>
+                    <div class="catalog-content-tag-list">
+                        <div class="spoiler" data-spoiler data-spoiler-more="Показать все теги">
+                            <div class="spoiler-content">
+                                <div class="catalog-content-tag">
+                                    <button class="btn-reset btn btn-primary">
+                                        <span class="btn__text">Комплексы с горкой</span>
+                                    </button>
+                                    <button class="btn-reset btn btn-primary">
+                                        <span class="btn__text">Уличные игровые комплексы</span>
+                                    </button>
+                                    <button class="btn-reset btn btn-primary">
+                                        <span class="btn__text">Антивандальные комплексы</span>
+                                    </button>
+                                    <button class="btn-reset btn btn-primary">
+                                        <span class="btn__text">Горки детские</span>
+                                    </button>
+                                    <button class="btn-reset btn btn-primary">
+                                        <span class="btn__text">Канатные дороги</span>
+                                    </button>
+                                    <button class="btn-reset btn btn-primary">
+                                        <span class="btn__text">Уличные игровые комплексы</span>
+                                    </button>
+                                    <button class="btn-reset btn btn-primary">
+                                        <span class="btn__text">Антивандальные комплексы</span>
+                                    </button>
+                                    <button class="btn-reset btn btn-primary">
+                                        <span class="btn__text">Горки детские</span>
+                                    </button>
+                                    <button class="btn-reset btn btn-primary">
+                                        <span class="btn__text">Канатные дороги</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="catalog-content-settings">
                         <button class="btn-reset btn catalog-content-filter-spoiler" data-filter-spoiler>

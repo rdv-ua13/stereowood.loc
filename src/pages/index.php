@@ -11,7 +11,13 @@
                                 <div class="catalog-preview__title h1">Детские игровые комплексы и оборудование для благоустройства</div>
                                 <div class="catalog-preview__subtitle">Отдых на свежем воздухе становится приятнее и комфортнее. Создаем игровое оборудование, спортивные комплексы и уличную мебель из качественных и надежных материалов.</div>
                             </div>
-                            <div class="catalog-preview__view slider-out" style="background-image: url('img/img-1.jpg');">
+                            <div class="catalog-preview__view slider-out">
+                                <img
+                                    loading="lazy"
+                                    class="catalog-preview__image image"
+                                    src="img/img-1.jpg"
+                                    alt="Изображение блока"
+                                >
                                 <div class="catalog-preview__caption caption-panel">
                                     <div class="caption-panel-descr">Оборудование серии “QUANTWOOD” - Впечатляет своим футуристическим дизайном и разнообразием геометрических форм.</div>
                                     <div class="caption-panel-link">

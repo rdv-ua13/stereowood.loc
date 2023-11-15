@@ -376,6 +376,7 @@ body {
 				}
 			}
 			.dropdown-menu {
+				z-index: 1;
 				position: absolute;
 				opacity: 0;
 				pointer-events: none;

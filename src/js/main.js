@@ -298,7 +298,21 @@ application.prototype.initHeaderSearch = function () {
 
 // Mobile number mask
 application.prototype.initMaskedInput = function () {
-    $('.isPhone').mask("+7-999-999-99-99", { autoclear: false });
+    $.fn.setCursorPosition = function(pos) {
+        if ($(this).get(0).setSelectionRange) {
+            $(this).get(0).setSelectionRange(pos, pos);
+        } else if ($(this).get(0).createTextRange) {
+            var range = $(this).get(0).createTextRange();
+            range.collapse(true);
+            range.moveEnd('character', pos);
+            range.moveStart('character', pos);
+            range.select();
+        }
+    };
+
+    $('.isPhone').click(function(){
+        $(this).setCursorPosition(3);
+    }).mask("+7-999-999-99-99", { completed: true });
 };
 
 // Initialize basic slider
@@ -418,21 +432,21 @@ application.prototype.initReadmore = function () {
         const spoiler = $('[data-spoiler]');
 
         spoiler.each(function (i) {
-            let currentMoreText = spoiler.eq(i).data('spoiler-more');
-            let currentLessText = spoiler.eq(i).data('spoiler-less');
+            let currentMoreText = $(this).data('spoiler-more');
+            let currentLessText = $(this).data('spoiler-less');
             let defaultHeight = 340;
             let defaultMoreText = 'Показать все';
             let defaultLessText = 'Свернуть';
             let currentElemHeight = spoiler.eq(i).data('collapsed-height');
 
-            if (currentMoreText === '' || currentMoreText === null || currentMoreText === undefined &&
-                currentLessText === '' || currentLessText === null || currentLessText === undefined)
-            {
-                currentMoreText = defaultMoreText;
+            if ($(this).is('[data-spoiler-more]')) {
+                currentMoreText = currentMoreText;
                 currentLessText = defaultLessText;
-            } else if (currentMoreText === '' || currentMoreText === null || currentMoreText === undefined) {
+            } else if ($(this).is('[data-spoiler-less]')) {
                 currentMoreText = defaultMoreText;
-            } else if (currentLessText === '' || currentLessText === null || currentLessText === undefined) {
+                currentLessText = currentLessText;
+            } else if (!$(this).is('[data-spoiler-more]') && !$(this).is('[data-spoiler-less]')) {
+                currentMoreText = defaultMoreText;
                 currentLessText = defaultLessText;
             }
 
@@ -697,8 +711,6 @@ application.prototype.initCatalogContentViewSwitcher = function () {
     }
 };
 
-
-
 // Initialize tooltips
 application.prototype.initTooltips = function () {
     if ($('.tooltip').length) {
@@ -736,7 +748,6 @@ application.prototype.initContactsMap = function () {
 
         let map,
             placemark,
-            iconContentLayout,
             mapItem = $('.contacts__map-content');
 
         function init () {
@@ -778,37 +789,7 @@ application.prototype.initContactsMap = function () {
                     }
                 );
 
-                // Создаём макет содержимого.
-                iconContentLayout = ymaps.templateLayoutFactory.createClass(
-                    '<div class="placemark">' +
-                    '                <div class="placemark-icon">' +
-                    '                    <svg class="icon">' +
-                    '                        <use href="img/sprite.svg#advantage-buildings-white"></use>' +
-                    '                    </svg>' +
-                    '                    <div class="placemark-icon-arrow"></div>' +
-                    '                </div>' +
-                    '                <div class="placemark-point"></div>' +
-                    '            </div>'
-                );
-
-                placemark = new ymaps.Placemark([coordX, coordY], {
-                    hintContent: hint
-                }, {
-                    // Опции.
-                    // Необходимо указать данный тип макета.
-                    iconLayout: 'default#imageWithContent',
-                    // Своё изображение иконки метки.
-                    iconImageHref: '',
-                    // Размеры метки.
-                    iconImageSize: [48, 48],
-                    // Смещение левого верхнего угла иконки относительно
-                    // её "ножки" (точки привязки).
-                    iconImageOffset: [-24, -24],
-                    // Смещение слоя с содержимым относительно слоя с картинкой.
-                    iconContentOffset: [15, 15],
-                    // Макет содержимого.
-                    iconContentLayout: iconContentLayout
-                });
+                placemark = new ymaps.Placemark([coordX, coordY]);
 
                 map.geoObjects.add(placemark);
                 map.controls.add(zoomControl);

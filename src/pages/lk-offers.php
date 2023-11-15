@@ -15,7 +15,7 @@
 <div class="gap-xl">
 	<div class="container">
 		<div class="slider-out basic-slider-wrap">
-			<div class="basic-slider basic-slider-mobile basic-slider-desktop basic-slider--shadow swiper" data-basic-slider>
+			<div class="pa-topmenu basic-slider basic-slider-mobile basic-slider-desktop basic-slider--shadow swiper" data-basic-slider>
 				<div class="swiper-wrapper">
 					<div class="swiper-slide">
 						<a href="javascript:;" class="btn-reset btn btn-primary">

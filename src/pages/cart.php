@@ -265,7 +265,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="cart-order__row-item-big field-wrapper">
+                        <div class="cart-order__row-item cart-order__row-item--x2 field-wrapper">
                             <div class="titled-input">
                                 <div class="input-title">Адрес доставки</div>
                                 <div class="input-wrapper">
@@ -298,7 +298,7 @@
                                 <span class="btn__text">Оформить заказ</span>
                             </button>
                         </div>
-                        <div class="cart-order__row-item-big field-wrapper">
+                        <div class="cart-order__row-item cart-order__row-item--x2 field-wrapper">
                             <button class="btn-reset btn btn-primary w-100" type="button">
                                 <span class="btn__text d-none d-sm-inline-block">Запросить коммерческое предложение для юридических лиц</span>
                                 <span class="btn__text d-sm-none">Коммерческое предложение для юр. лиц</span>
