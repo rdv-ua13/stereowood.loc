@@ -238,6 +238,106 @@
 			</div>
 
 			<div class="cart-order">
+
+                <div class="cart-order__item field-wrapper">
+                    <div class="titled-input">
+                        <div class="input-title">Ф.И.О.</div>
+                        <div class="input-wrapper">
+                            <input
+                                    class="input-reset input"
+                                    type="text"
+                                    name=""
+                                    value=""
+                                    placeholder="Иванов Иван Иванович"
+                                    autocomplete="off"
+                                    required
+                            >
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-order__item field-wrapper">
+                    <div class="titled-input">
+                        <div class="input-title">Телефон</div>
+                        <div class="input-wrapper">
+                            <input
+                                    class="input-reset input isPhone"
+                                    type="tel"
+                                    name=""
+                                    value=""
+                                    placeholder="+7"
+                                    required
+                            >
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-order__item field-wrapper">
+                    <div class="titled-input">
+                        <div class="input-title">E-mail</div>
+                        <div class="input-wrapper">
+                            <input
+                                    class="input-reset input"
+                                    type="email"
+                                    name=""
+                                    value=""
+                                    placeholder="Mail.ru@mail.com"
+                                    autocomplete="off"
+                                    required
+                            >
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-order__item field-wrapper">
+                    <div class="titled-input">
+                        <div class="input-title">Способ доставки</div>
+                        <div class="input-wrapper">
+                            <select
+                                    id=""
+                                    class="input-reset input input-select2 js-select2"
+                                    name=""
+                                    required
+                            >
+                                <option value="0">Самовывоз</option>
+                                <option value="1">Доставка</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-order__item cart-order__item--x2-last field-wrapper">
+                    <div class="titled-input">
+                        <div class="input-title">Адрес доставки</div>
+                        <div class="input-wrapper">
+                            <input
+                                    class="input-reset input"
+                                    type="text"
+                                    name=""
+                                    value=""
+                                    placeholder=""
+                                    autocomplete="off"
+                                    required
+                            >
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-order__item cart-order__item--x3 field-wrapper">
+                    <span class="custom-checkbox custom-checkbox--agree">
+                        <input id="calcProjectFormAgree" class="custom-checkbox__input" type="checkbox" checked>
+                        <label for="calcProjectFormAgree" class="custom-checkbox__label-for">Даю согласие на обработку моих персональных данных. Соглашаюсь с <a class="link link-tdu" href="javascript:;">Политикой конфиденциальности</a> и ознакомлен с <a class="link link-tdu" href="javascript:;">Политикой в отношении обработки персональных данных</a>.</label>
+                    </span>
+                </div>
+                <div class="cart-order__item field-wrapper">
+                    <button class="btn-reset btn btn-secondary w-100" type="submit">
+                        <span class="btn__text">Оформить заказ</span>
+                    </button>
+                </div>
+                <div class="cart-order__item cart-order__item--x2-last field-wrapper">
+                    <button class="btn-reset btn btn-primary w-100" type="button">
+                        <span class="btn__text d-none d-sm-inline-block">Запросить коммерческое предложение для юридических лиц</span>
+                        <span class="btn__text d-sm-none">Коммерческое предложение для юр. лиц</span>
+                    </button>
+                </div>
+
+
+                <?/*
                 <div class="cart-order__row">
                     <div class="cart-order__row-item field-wrapper">
                         <div class="titled-input">
@@ -345,6 +445,8 @@
                         </button>
                     </div>
                 </div>
+                */?>
+
 			</div>
 		</div>
 	</div>
