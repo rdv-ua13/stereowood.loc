@@ -16,7 +16,7 @@
 							<div class="swiper-slide">
 								<img
 									loading="lazy"
-									src="img/img-8.jpg"
+									src="img/card-img-1.jpg"
 									class="image"
 									width="640"
 									height="400"
@@ -26,7 +26,7 @@
 							<div class="swiper-slide">
 								<img
 									loading="lazy"
-									src="img/img-9.jpg"
+									src="img/card-img-2.jpg"
 									class="image"
 									width="640"
 									height="400"
@@ -36,7 +36,7 @@
 							<div class="swiper-slide">
 								<img
 									loading="lazy"
-									src="img/img-10.jpg"
+									src="img/card-img-3.jpg"
 									class="image"
 									width="640"
 									height="400"
@@ -46,63 +46,53 @@
 							<div class="swiper-slide">
 								<img
 									loading="lazy"
-									src="img/img-8.jpg"
+									src="img/card-img-4.jpg"
 									class="image"
 									width="640"
 									height="400"
 									alt="Изображение блока"
 								>
 							</div>
-							<div class="swiper-slide">
-								<img
-									loading="lazy"
-									src="img/img-9.jpg"
-									class="image"
-									width="640"
-									height="400"
-									alt="Изображение блока"
-								>
-							</div>
-							<div class="swiper-slide">
-								<img
-									loading="lazy"
-									src="img/img-10.jpg"
-									class="image"
-									width="640"
-									height="400"
-									alt="Изображение блока"
-								>
-							</div>
-							<div class="swiper-slide">
-								<img
-									loading="lazy"
-									src="img/img-8.jpg"
-									class="image"
-									width="640"
-									height="400"
-									alt="Изображение блока"
-								>
-							</div>
-							<div class="swiper-slide">
-								<img
-									loading="lazy"
-									src="img/img-9.jpg"
-									class="image"
-									width="640"
-									height="400"
-									alt="Изображение блока"
-								>
-							</div>
-							<div class="swiper-slide">
-								<img
-									loading="lazy"
-									src="img/img-10.jpg"
-									class="image"
-									width="640"
-									height="400"
-									alt="Изображение блока"
-								>
-							</div>
+                            <div class="swiper-slide">
+                                <img
+                                        loading="lazy"
+                                        src="img/card-img-1.jpg"
+                                        class="image"
+                                        width="640"
+                                        height="400"
+                                        alt="Изображение блока"
+                                >
+                            </div>
+                            <div class="swiper-slide">
+                                <img
+                                        loading="lazy"
+                                        src="img/card-img-2.jpg"
+                                        class="image"
+                                        width="640"
+                                        height="400"
+                                        alt="Изображение блока"
+                                >
+                            </div>
+                            <div class="swiper-slide">
+                                <img
+                                        loading="lazy"
+                                        src="img/card-img-3.jpg"
+                                        class="image"
+                                        width="640"
+                                        height="400"
+                                        alt="Изображение блока"
+                                >
+                            </div>
+                            <div class="swiper-slide">
+                                <img
+                                        loading="lazy"
+                                        src="img/card-img-4.jpg"
+                                        class="image"
+                                        width="640"
+                                        height="400"
+                                        alt="Изображение блока"
+                                >
+                            </div>
 						</div>
 						<div class="swiper-navigation">
 							<div class="swiper-button-next">
@@ -126,7 +116,7 @@
 							<div class="swiper-slide">
 								<img
 									loading="lazy"
-									src="img/img-8.jpg"
+									src="img/card-img-1.jpg"
 									class="image"
 									width="640"
 									height="400"
@@ -136,7 +126,7 @@
 							<div class="swiper-slide">
 								<img
 									loading="lazy"
-									src="img/img-9.jpg"
+									src="img/card-img-2.jpg"
 									class="image"
 									width="640"
 									height="400"
@@ -146,7 +136,7 @@
 							<div class="swiper-slide">
 								<img
 									loading="lazy"
-									src="img/img-10.jpg"
+									src="img/card-img-3.jpg"
 									class="image"
 									width="640"
 									height="400"
@@ -156,63 +146,53 @@
 							<div class="swiper-slide">
 								<img
 									loading="lazy"
-									src="img/img-8.jpg"
+									src="img/card-img-4.jpg"
 									class="image"
 									width="640"
 									height="400"
 									alt="Изображение блока"
 								>
 							</div>
-							<div class="swiper-slide">
-								<img
-									loading="lazy"
-									src="img/img-9.jpg"
-									class="image"
-									width="640"
-									height="400"
-									alt="Изображение блока"
-								>
-							</div>
-							<div class="swiper-slide">
-								<img
-									loading="lazy"
-									src="img/img-10.jpg"
-									class="image"
-									width="640"
-									height="400"
-									alt="Изображение блока"
-								>
-							</div>
-							<div class="swiper-slide">
-								<img
-									loading="lazy"
-									src="img/img-8.jpg"
-									class="image"
-									width="640"
-									height="400"
-									alt="Изображение блока"
-								>
-							</div>
-							<div class="swiper-slide">
-								<img
-									loading="lazy"
-									src="img/img-9.jpg"
-									class="image"
-									width="640"
-									height="400"
-									alt="Изображение блока"
-								>
-							</div>
-							<div class="swiper-slide">
-								<img
-									loading="lazy"
-									src="img/img-10.jpg"
-									class="image"
-									width="640"
-									height="400"
-									alt="Изображение блока"
-								>
-							</div>
+                            <div class="swiper-slide">
+                                <img
+                                        loading="lazy"
+                                        src="img/card-img-1.jpg"
+                                        class="image"
+                                        width="640"
+                                        height="400"
+                                        alt="Изображение блока"
+                                >
+                            </div>
+                            <div class="swiper-slide">
+                                <img
+                                        loading="lazy"
+                                        src="img/card-img-2.jpg"
+                                        class="image"
+                                        width="640"
+                                        height="400"
+                                        alt="Изображение блока"
+                                >
+                            </div>
+                            <div class="swiper-slide">
+                                <img
+                                        loading="lazy"
+                                        src="img/card-img-3.jpg"
+                                        class="image"
+                                        width="640"
+                                        height="400"
+                                        alt="Изображение блока"
+                                >
+                            </div>
+                            <div class="swiper-slide">
+                                <img
+                                        loading="lazy"
+                                        src="img/card-img-4.jpg"
+                                        class="image"
+                                        width="640"
+                                        height="400"
+                                        alt="Изображение блока"
+                                >
+                            </div>
 						</div>
 					</div>
 				</div>
@@ -308,20 +288,35 @@
                         <div class="gap-xxs">
                             <span class="medium-bold">Основные цвета</span>
                         </div>
-                        <div class="product-card-descr">
-                            <div class="product-card-descr__item product-card-color">
-                                <div class="product-card-color__view" style="background-image: url('img/pc-color-1.jpg')"></div>
-                                <div class="product-card-color__title">Орегон</div>
-                            </div>
-                            <div class="product-card-descr__item product-card-color">
-                                <div class="product-card-color__view" style="background-image: url('img/pc-color-2.jpg')"></div>
-                                <div class="product-card-color__title">Орех</div>
-                            </div>
-                            <div class="product-card-descr__item product-card-color">
-                                <div class="product-card-color__view" style="background-image: url('img/pc-color-3.jpg')"></div>
-                                <div class="product-card-color__title">Махагон</div>
-                            </div>
-                        </div>
+                        <ul class="list-reset product-card-descr">
+                            <li class="product-card-descr__item">
+                                <span class="product-card-color-wrapper custom-radio">
+                                    <label for="pc_color_oregon" class="product-card-color custom-radio__label-for">
+                                        <div class="product-card-color__view" style="background-image: url('img/pc-color-1.jpg')"></div>
+                                        <div class="product-card-color__title">Орегон</div>
+                                    </label>
+                                    <input id="pc_color_oregon" class="custom-radio__input" type="radio" name="pc_color" value="0" checked>
+                                </span>
+                            </li>
+                            <li class="product-card-descr__item">
+                                <span class="product-card-color-wrapper custom-radio">
+                                    <label for="pc_color_oreh" class="product-card-color custom-radio__label-for">
+                                        <div class="product-card-color__view" style="background-image: url('img/pc-color-2.jpg')"></div>
+                                        <div class="product-card-color__title">Орех-херо-орех</div>
+                                    </label>
+                                    <input id="pc_color_oreh" class="custom-radio__input" type="radio" name="pc_color" value="1" checked>
+                                </span>
+                            </li>
+                            <li class="product-card-descr__item">
+                                <span class="product-card-color-wrapper custom-radio">
+                                    <label for="pc_color_mahagon" class="product-card-color custom-radio__label-for">
+                                        <div class="product-card-color__view" style="background-image: url('img/pc-color-3.jpg')"></div>
+                                        <div class="product-card-color__title">Махагон</div>
+                                    </label>
+                                    <input id="pc_color_mahagon" class="custom-radio__input" type="radio" name="pc_color" value="2" checked>
+                                </span>
+                            </li>
+                        </ul>
                     </div>
 				</div>
 				<div class="">
